@@ -1,6 +1,6 @@
 package com.churris.SKABackend.models
 
-data class Genero(
+data class CatalogoGenerico (
     val id: String,
     val descripcion: String
 )
