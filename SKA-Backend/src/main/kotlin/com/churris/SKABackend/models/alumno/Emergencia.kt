@@ -1,4 +1,4 @@
-package com.churris.SKABackend.models
+package com.churris.SKABackend.models.alumno
 
 data class Emergencia (
     val nombre: String,

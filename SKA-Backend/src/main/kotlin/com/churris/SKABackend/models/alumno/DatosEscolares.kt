@@ -1,4 +1,6 @@
-package com.churris.SKABackend.models
+package com.churris.SKABackend.models.alumno
+
+import com.churris.SKABackend.models.alumno.CatalogoGenerico
 
 data class DatosEscolares (
     val nombreBachillerato: String,
