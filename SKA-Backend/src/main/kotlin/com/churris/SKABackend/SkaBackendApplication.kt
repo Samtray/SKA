@@ -1,5 +1,6 @@
 package com.churris.SKABackend
 
+import com.churris.SKABackend.services.DatabaseService
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
