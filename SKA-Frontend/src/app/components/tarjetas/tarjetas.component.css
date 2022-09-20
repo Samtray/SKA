@@ -1,0 +1,14 @@
+.tarjetas-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tarjeta {
+    background: #FFFFFF;
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    min-width: calc(20% - 8px);
+    height: 100px;
+}

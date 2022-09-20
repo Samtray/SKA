@@ -1,0 +1,23 @@
+.header {
+    background-color: #66142a;
+    height: 50px;
+}
+
+.logo {
+    padding: 10px;
+    height: 50px;
+}
+
+.mat-cafe {
+    background-color: #c7af7c;
+}
+
+.logout-button {
+    padding: 5px 10px;
+    float: right;
+}
+
+.icon {
+    transform: scale(1.25);
+    color: white;
+}
