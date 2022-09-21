@@ -18,19 +18,19 @@ const cars =
   [
     {
       name: "churro carro",
-      img: "/assets/1.jpg"
+      img: "https://randomuser.me/api/portraits/men/12.jpg"
     },
     {
       name: "febo carro",
-      img: "/assets/2.jpg"
+      img: "https://randomuser.me/api/portraits/men/14.jpg"
     },
     {
       name: "tavo carro",
-      img: "/assets/3.jpg"
+      img: "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
       name: "maik carro",
-      img: "/assets/4.jpg"
+      img: "https://randomuser.me/api/portraits/men/10.jpg"
     }
 
   ]
