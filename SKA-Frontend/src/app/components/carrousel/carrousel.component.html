@@ -1,0 +1,11 @@
+<p-carousel
+  [value]="churro"
+  [numVisible]="3"
+  [numScroll]="1"
+  [autoplayInterval]="1000"
+>
+  <ng-template let-alumno pTemplate="item">
+    {{ alumno.name }}
+    <img width="100px" height="50px" [src]="alumno.img" alt="" />
+  </ng-template>
+</p-carousel>
