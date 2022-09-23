@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carrousel.component.css']
 })
 export class CarrouselComponent implements OnInit {
-  churro = cars
+  alumno = alumnos
   constructor() { }
 
   ngOnInit(): void {
@@ -14,22 +14,22 @@ export class CarrouselComponent implements OnInit {
   }
 
 }
-const cars =
+const alumnos =
   [
     {
-      name: "churro carro",
+      name: "Alcaraz Ibarra Ahmed Fabian",
       img: "https://randomuser.me/api/portraits/men/12.jpg"
     },
     {
-      name: "febo carro",
+      name: "Lozano Almanza Miguel Angel",
       img: "https://randomuser.me/api/portraits/men/14.jpg"
     },
     {
-      name: "tavo carro",
+      name: "Torrecilas Beltrán Jesús Gustavo",
       img: "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
-      name: "maik carro",
+      name: "Castellanos Salgado Samuel Antonio ",
       img: "https://randomuser.me/api/portraits/men/10.jpg"
     }
 
