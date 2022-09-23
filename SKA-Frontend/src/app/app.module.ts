@@ -24,7 +24,7 @@ import { PopupComponent } from './components/popup/popup.component';
     GraficasComponent,
     TarjetasComponent,
     WrapperComponent,
-    CarrouselComponent
+    CarrouselComponent,
     PopupComponent
   ],
   imports: [
