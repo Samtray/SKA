@@ -7,20 +7,19 @@
 
 <p-carousel
   [value]="alumno"
-  [numVisible]="3"
+  [numVisible]="8"
   [numScroll]="3"
   [circular]="false"
 >
-  <ng-template pTemplate="header">
-    <h5>Alumnos</h5>
-  </ng-template>
+  <ng-template pTemplate="header"> </ng-template>
   <ng-template let-alumno pTemplate="item">
     <div class="product-item">
       <div class="product-item-content">
         <div class="p-mb-3"></div>
         <div>
-          <img [src]="alumno.img" alt="" />
+          <img class="product-image" [src]="alumno.img" alt="" />
           <h4 class="p-mb-1">{{ alumno.name }}</h4>
+          <h6 class="p-mt-0 p-mb-3">{{ alumno.matricula }}</h6>
         </div>
       </div>
     </div>
