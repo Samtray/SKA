@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
@@ -12,7 +10,7 @@ import { SidebarModule } from 'primeng/sidebar';
   imports: [
     CommonModule,
     CarouselModule,
-    SidebarModule
+    SidebarModule,
   ],
   exports: [
     CarouselModule,
