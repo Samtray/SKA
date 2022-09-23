@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../modules/material/material.module';
 import { PrimengModule } from 'src/modules/primeng/primeng.module';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
     GraficasComponent,
     TarjetasComponent,
     WrapperComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

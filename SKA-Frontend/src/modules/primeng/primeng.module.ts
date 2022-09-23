@@ -4,17 +4,20 @@ import { CommonModule } from '@angular/common';
 
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
+    SidebarModule
   ],
   exports: [
     CarouselModule,
-    ButtonModule
+    ButtonModule,
+    SidebarModule
   ]
 })
 export class PrimengModule { }

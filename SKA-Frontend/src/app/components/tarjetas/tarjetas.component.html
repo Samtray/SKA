@@ -1,7 +1,17 @@
 <div class="tarjetas-container">
-    <div class="tarjeta"></div>
-    <div class="tarjeta"></div>
-    <div class="tarjeta"></div>
-    <div class="tarjeta"></div>
-    <div class="tarjeta"></div>
+    <div class="tarjeta" *ngFor=" let tarjeta of tarjetaList; let i = index">
+        <div class="sidebar">
+            <div class="sidebar-icon">
+                <mat-icon class="icon" (click)="abrirMenu()">{{tarjeta.icon}}</mat-icon>
+            </div>
+        </div>
+        <div class="text-container">
+            <div class="titulo">{{tarjeta.title}}</div>
+            <div class="subtitulo">{{tarjeta.subTitle}}</div>
+        </div>
+    </div>
 </div>
+
+<p-sidebar [(visible)]="displayMenu" position="bottom">
+    Content
+</p-sidebar>
