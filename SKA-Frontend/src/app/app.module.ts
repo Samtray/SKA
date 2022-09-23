@@ -11,6 +11,7 @@ import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MaterialModule } from './material/material.module';
     AlumnosComponent,
     GraficasComponent,
     TarjetasComponent,
-    WrapperComponent
+    WrapperComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
