@@ -11,6 +11,7 @@
   [numScroll]="8"
   [circular]="false"
   [showIndicators]="false"
+  [responsiveOptions]="responsive"
 >
   <!-- <ng-template pTemplate="header"> Alumnos </ng-template> -->
   <ng-template let-alumno pTemplate="item">
@@ -19,7 +20,7 @@
         <div class="p-mb-3"></div>
         <div>
           <img class="product-image" [src]="alumno.img" alt="" />
-          <p class="bg-primary matricula">{{ alumno.matricula }}</p>
+          <p class="matricula">{{ alumno.matricula }}</p>
           <p class="nombre">{{ alumno.name }}</p>
         </div>
       </div>
