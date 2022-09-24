@@ -8,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class CarrouselComponent implements OnInit {
   alumno = alumnos
   responsive = responsiveOptions
+  displayMenu: boolean = false;
   constructor() { }
+  selectedIndex: any = 0;
+
 
   ngOnInit(): void {
 
   }
 
-  abrirMenu(event: Event) {
-    console.log(event);
+  abrirMenu(){
+    this.displayMenu = true;
+  }
+
+  setSelected(matricula: any) {
+    this.selectedIndex = matricula;
   }
 }
 const alumnos =

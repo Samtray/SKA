@@ -2,7 +2,7 @@
     <div class="tarjeta" *ngFor=" let tarjeta of tarjetaList; let i = index">
         <div class="sidebar">
             <div class="sidebar-icon">
-                <mat-icon class="icon" (click)="abrirMenu()">{{tarjeta.icon}}</mat-icon>
+                <mat-icon class="icon">{{tarjeta.icon}}</mat-icon>
             </div>
         </div>
         <div class="text-container">
@@ -11,7 +11,3 @@
         </div>
     </div>
 </div>
-
-<p-sidebar [(visible)]="displayMenu" position="bottom">
-    Content
-</p-sidebar>
