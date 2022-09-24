@@ -6,6 +6,10 @@
     padding: 2rem 0;
 }
 
+.selected {
+    background-color: rgba(212, 212, 212, 0.7);
+}
+
 .product-image {
     width: 70%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -46,12 +50,15 @@
     color: #495057;
     border: 0 none;
     box-shadow: 0 1px 10px rgb(0 0 0 / 30%);
+    padding: 10px 5px;
 }
 
 :host ::ng-deep .p-sidebar-header {
-    display: flex;
-    align-items: left;
-    justify-content: flex-start;
+    display: none;
+}
+
+:host ::ng-deep .p-tabview-panel {
+    position: fixed;
 }
 
 

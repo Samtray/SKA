@@ -10,6 +10,8 @@ export class CarrouselComponent implements OnInit {
   responsive = responsiveOptions
   displayMenu: boolean = false;
   constructor() { }
+  selectedIndex: any = 0;
+
 
   ngOnInit(): void {
 
@@ -17,6 +19,10 @@ export class CarrouselComponent implements OnInit {
 
   abrirMenu(){
     this.displayMenu = true;
+  }
+
+  setSelected(matricula: any) {
+    this.selectedIndex = matricula;
   }
 }
 const alumnos =
