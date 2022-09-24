@@ -9,5 +9,26 @@
 .product-image {
   width: 70%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 3px;
+  border-radius: 5px;
+}
+
+.product-item {
+  cursor: pointer;
+}
+
+.matricula {
+  margin: auto;
+  margin-top: 10px;
+  background-color: #c7af7c;
+  padding: 5px 10px 5px 10px;
+  width: fit-content;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+}
+
+.nombre {
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.65);
+  margin-top: 5px;
 }
