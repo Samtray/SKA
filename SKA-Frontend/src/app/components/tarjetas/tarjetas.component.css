@@ -48,14 +48,3 @@
     font-size: 16px;
     color: rgb(0, 0, 0, 0.30);
 }
-
-:host ::ng-deep .p-sidebar-bottom.p-sidebar-sm {
-    height: 50vh;
-}
-
-:host ::ng-deep .p-sidebar {
-    background: #ffffff;
-    color: #495057;
-    border: 0 none;
-    box-shadow: 0 1px 10px rgb(0 0 0 / 30%);
-}

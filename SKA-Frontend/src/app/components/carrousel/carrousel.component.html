@@ -1,29 +1,23 @@
-<!-- <p-carousel [value]="alumno" [numVisible]="3" [numScroll]="1">
-  <ng-template let-alumno pTemplate="alumno">
-    {{ alumno.name }}
-    <img [src]="alumno.img" alt="" />
-  </ng-template>
-</p-carousel> -->
-
-<p-carousel
-  [value]="alumno"
-  [numVisible]="8"
-  [numScroll]="8"
-  [circular]="false"
-  [showIndicators]="false"
-  [responsiveOptions]="responsive"
->
-  <!-- <ng-template pTemplate="header"> Alumnos </ng-template> -->
-  <ng-template let-alumno pTemplate="item">
-    <div class="product-item" (click)="abrirMenu($event)">
-      <div class="product-item-content">
-        <div class="p-mb-3"></div>
-        <div>
-          <img class="product-image" [src]="alumno.img" alt="" />
-          <p class="matricula">{{ alumno.matricula }}</p>
-          <p class="nombre">{{ alumno.name }}</p>
+<p-carousel [value]="alumno" [numVisible]="8" [numScroll]="8" [circular]="false" [showIndicators]="false" [responsiveOptions]="responsive">
+    <!-- <ng-template pTemplate="header"> Alumnos </ng-template> -->
+    <ng-template let-alumno pTemplate="item">
+        <div class="product-item" (click)="abrirMenu()">
+            <div class="product-item-content">
+                <div class="p-mb-3"></div>
+                <div>
+                    <img class="product-image" [src]="alumno.img" alt="" />
+                    <p class="matricula">{{ alumno.matricula }}</p>
+                    <p class="nombre">{{ alumno.name }}</p>
+                </div>
+            </div>
+            >>>>>>> Stashed changes
         </div>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
 </p-carousel>
+
+<p-sidebar [(visible)]="displayMenu" position="bottom" [modal]="false" styleClass="p-sidebar-sm">
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+</p-sidebar>

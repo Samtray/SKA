@@ -8,14 +8,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class TarjetasComponent implements OnInit {
   tarjetaList = TarjetaList;
-  displayMenu: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  abrirMenu(){
-    this.displayMenu = true;
   }
 }
 

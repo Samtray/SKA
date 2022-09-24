@@ -1,35 +1,58 @@
 .product-item-content {
-  border: 1px solid var(--surface-d);
-  border-radius: 3px;
-  margin: 15px 5px 15px 5px;
-  text-align: center;
-  padding: 2rem 0;
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: 15px 5px 15px 5px;
+    text-align: center;
+    padding: 2rem 0;
 }
 
 .product-image {
-  width: 70%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 5px;
+    width: 70%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
 }
 
 .product-item {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .matricula {
-  margin: auto;
-  margin-top: 10px;
-  background-color: #c7af7c;
-  padding: 5px 10px 5px 10px;
-  width: fit-content;
-  border-radius: 50px;
-  color: white;
-  font-size: 16px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #c7af7c;
+    padding: 5px 10px 5px 10px;
+    width: fit-content;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
 }
 
 .nombre {
-  font-size: 14px;
-  color: rgb(0, 0, 0, 0.65);
-  margin-top: 10px;
-  padding: 0px 5px 0px 5px;
+    font-size: 14px;
+    color: rgb(0, 0, 0, 0.65);
+    margin-top: 10px;
+    padding: 0px 5px 0px 5px;
 }
+
+
+/* Menu */
+
+:host ::ng-deep .p-sidebar-bottom.p-sidebar-sm {
+    height: 45vh;
+}
+
+:host ::ng-deep .p-sidebar {
+    background: #ffffff;
+    color: #495057;
+    border: 0 none;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 30%);
+}
+
+:host ::ng-deep .p-sidebar-header {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+
+/* //////////////////// */
