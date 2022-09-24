@@ -1,12 +1,35 @@
 .product-item-content {
   border: 1px solid var(--surface-d);
   border-radius: 3px;
-  margin: 0.3rem;
+  margin: 15px 5px 15px 5px;
   text-align: center;
   padding: 2rem 0;
 }
 
 .product-image {
-  width: 50%;
+  width: 70%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+}
+
+.product-item {
+  cursor: pointer;
+}
+
+.matricula {
+  margin: auto;
+  margin-top: 10px;
+  background-color: #c7af7c;
+  padding: 5px 10px 5px 10px;
+  width: fit-content;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+}
+
+.nombre {
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.65);
+  margin-top: 10px;
+  padding: 0px 5px 0px 5px;
 }
