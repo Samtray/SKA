@@ -23,7 +23,7 @@
 .matricula {
     margin: auto;
     margin-top: 10px;
-    background-color: #c7af7c;
+    background-color: #66142a;
     padding: 5px 10px 5px 10px;
     width: fit-content;
     border-radius: 50px;
@@ -59,6 +59,11 @@
 
 :host ::ng-deep .p-tabview-panel {
     position: fixed;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    border-color: #a33855;
+    color: #a33855
 }
 
 
