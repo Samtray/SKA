@@ -23,7 +23,7 @@
 .matricula {
     margin: auto;
     margin-top: 10px;
-    background-color: #66142a;
+    background-color: #c7af7c;
     padding: 5px 10px 5px 10px;
     width: fit-content;
     border-radius: 50px;
@@ -39,7 +39,7 @@
 }
 
 
-/* Menu */
+/*/////// Menu ///////*/
 
 :host ::ng-deep .p-sidebar-bottom.p-sidebar-sm {
     height: 45vh;
@@ -49,7 +49,7 @@
     background: #ffffff;
     color: #495057;
     border: 0 none;
-    box-shadow: 0 1px 10px rgb(0 0 0 / 30%);
+    box-shadow: 0 1px 10px rgb(0 0 0 / 50%);
     padding: 10px 5px;
 }
 
@@ -57,13 +57,26 @@
     display: none;
 }
 
-:host ::ng-deep .p-tabview-panel {
-    position: fixed;
+:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    border-color: #c7af7c;
+    color: #c7af7c
 }
 
-:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
-    border-color: #a33855;
-    color: #a33855
+.push {
+    width: 1px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.close-button {
+    border: none;
+    background-color: initial;
+    cursor: pointer;
+}
+
+.icon {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 

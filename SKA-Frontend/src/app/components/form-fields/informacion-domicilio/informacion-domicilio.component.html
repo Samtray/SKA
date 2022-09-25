@@ -1,0 +1,36 @@
+<div style="margin-top: 10px;">
+    <p-panel header="Información de Domicilio" [toggleable]="true">
+        <div class="my-4 p-fluid grid ">
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+  <input type="text" pInputText  inputId="calle" [(ngModel)]="calle">
+  <label for="calle">Calle</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+  <input type="text" pInputText  inputId="numero"  [(ngModel)]="numero">
+  <label for="numero">Número</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+  <input type="text" pInputText inputId="colonia"  [(ngModel)]="colonia">
+  <label for="colonia">Colonia</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+    <p-dropdown inputId="municipio" [autoDisplayFirst]="false"
+    [options]="catalogos.municipio" [(ngModel)]="municipio" optionLabel="descripcion"></p-dropdown>
+    <label for="municipio">Municipio</label>
+</span>
+            </div>
+
+        </div>
+    </p-panel>
+</div>

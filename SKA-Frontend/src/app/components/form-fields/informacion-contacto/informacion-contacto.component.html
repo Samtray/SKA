@@ -1,0 +1,35 @@
+<div style="margin-top: 10px;">
+    <p-panel header="Información de Contacto" [toggleable]="true">
+        <div class="my-4 p-fluid grid ">
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="email" pInputText  inputId="correoPersonal" [(ngModel)]="correoPersonal">
+<label for="correoPersonal">Correo Personal</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="email" pInputText  inputId="correoInstitucional"  [(ngModel)]="correoInstitucional">
+<label for="correoInstitucional">Correo Institucional</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<p-inputMask mask="(999) 999-9999" inputId="telefonoCasa"  [(ngModel)]="telefonoCasa"></p-inputMask>
+<label for="telefonoCasa">Teléfono de Casa</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<p-inputMask mask="(999) 999-9999" inputId="telefonoMovil"  [(ngModel)]="telefonoMovil"></p-inputMask>
+<label for="telefonoMovil">Teléfono Móvil</label>
+</span>
+            </div>
+
+        </div>
+    </p-panel>
+</div>
