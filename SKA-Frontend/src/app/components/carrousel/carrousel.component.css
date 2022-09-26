@@ -42,7 +42,7 @@
 /*/////// Menu ///////*/
 
 :host ::ng-deep .p-sidebar-bottom.p-sidebar-sm {
-    height: 45vh;
+    height: 60vh;
 }
 
 :host ::ng-deep .p-sidebar {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 export interface catalogo {
   id: any
@@ -25,6 +25,9 @@ export interface catalogosInterface {
   styleUrls: ['./carrousel.component.css']
 })
 export class CarrouselComponent implements OnInit {
+
+  @Output() esconderTarjetas = new EventEmitter();
+
   alumno = alumnos;
   responsive = responsiveOptions;
   displayMenu: boolean = false;
@@ -39,6 +42,12 @@ export class CarrouselComponent implements OnInit {
 
   abrirMenu(){
     this.displayMenu = true;
+    this.esconderTarjetas.emit(false);
+  }
+
+  cerrarMenu(){
+    this.displayMenu = false;
+    this.esconderTarjetas.emit(true);
   }
 
   setSelected(matricula: any) {
