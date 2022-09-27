@@ -10,10 +10,21 @@ export class InformacionLaboralComponent implements OnInit {
 
   trabaja: boolean = false;
   trabajoRelacionado: boolean = false;
+  empresaNombre!: string;
+  empresaDomicilo!: string;
+  empresaTelefono!: string;
+  empresaPuesto!: string;
+  empresaDepartamento!: string;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  checkCheckbox(){
+    if (this.trabaja == false && this.trabajoRelacionado == true){
+      this.trabajoRelacionado = false;
+    }
   }
 
 }

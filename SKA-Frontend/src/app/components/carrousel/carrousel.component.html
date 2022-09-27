@@ -1,66 +1,42 @@
-<p-carousel
-  [value]="alumno"
-  [numVisible]="8"
-  [numScroll]="8"
-  [circular]="false"
-  [showIndicators]="false"
-  [responsiveOptions]="responsive"
->
-  <!-- <ng-template pTemplate="header"> Alumnos </ng-template> -->
-  <ng-template let-alumno pTemplate="item">
-    <div
-      class="flex product-item"
-      (click)="abrirMenu(); setSelected(alumno.matricula)"
-    >
-      <div
-        class="product-item-content"
-        [ngClass]="{ selected: selectedIndex == alumno.matricula }"
-      >
-        <div class="p-mb-3"></div>
-        <div>
-          <img
-            class="product-image sm:flex-shrink-1"
-            [src]="alumno.img"
-            alt=""
-          />
-          <p class="matricula">{{ alumno.matricula }}</p>
-          <p class="nombre">{{ alumno.name }}</p>
+<p-carousel [value]="alumno" [numVisible]="8" [numScroll]="8" [circular]="false" [showIndicators]="false" [responsiveOptions]="responsive">
+    <!-- <ng-template pTemplate="header"> Alumnos </ng-template> -->
+    <ng-template let-alumno pTemplate="item">
+        <div class="flex product-item" (click)="abrirMenu(); setSelected(alumno.matricula)">
+            <div class="product-item-content" [ngClass]="{ selected: selectedIndex == alumno.matricula }">
+                <div class="p-mb-3"></div>
+                <div>
+                    <img class="product-image sm:flex-shrink-1" [src]="alumno.img" alt="" />
+                    <p class="matricula">{{ alumno.matricula }}</p>
+                    <p class="nombre">{{ alumno.name }}</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
 </p-carousel>
 
-<p-sidebar
-  (onHide)="setSelected(-1)"
-  [(visible)]="displayMenu"
-  [showCloseIcon]="false"
-  position="bottom"
-  [modal]="false"
-  styleClass="p-sidebar-sm"
->
-  <div class="push">
-    <button type="button" class="close-button" (click)="cerrarMenu()">
+<p-sidebar (onHide)="setSelected(-1)" [(visible)]="displayMenu" [showCloseIcon]="false" position="bottom" [modal]="false" styleClass="p-sidebar-sm">
+    <div class="push">
+        <button type="button" class="close-button" (click)="cerrarMenu()">
       <mat-icon class="icon">close</mat-icon>
     </button>
-  </div>
-  <p-tabView>
-    <p-tabPanel header="Datos Personales">
-      <app-informacion-personal
-        [catalogos]="catalogos"
-        [alumno]="alumno"
-      ></app-informacion-personal>
-      <app-informacion-domicilio
-        [catalogos]="catalogos"
-        [alumno]="alumno"
-      ></app-informacion-domicilio>
-      <app-informacion-contacto [alumno]="alumno"></app-informacion-contacto>
-    </p-tabPanel>
-    <p-tabPanel header="Datos Familiares">
-      <app-informacion-familiares></app-informacion-familiares>
-    </p-tabPanel>
-    <p-tabPanel header="Datos Laborales"> Content 3 </p-tabPanel>
-    <p-tabPanel header="Datos Económicos"> Content 4 </p-tabPanel>
-    <p-tabPanel header="Datos Escolares"> Content 5 </p-tabPanel>
-  </p-tabView>
+    </div>
+    <p-tabView>
+        <p-tabPanel header="Datos Personales">
+            <app-informacion-personal [catalogos]="catalogos" [alumno]="alumno"></app-informacion-personal>
+            <app-informacion-domicilio [catalogos]="catalogos" [alumno]="alumno"></app-informacion-domicilio>
+            <app-informacion-contacto [alumno]="alumno"></app-informacion-contacto>
+        </p-tabPanel>
+        <p-tabPanel header="Datos Familiares">
+            <app-informacion-familiares></app-informacion-familiares>
+        </p-tabPanel>
+        <p-tabPanel header="Datos Laborales">
+            <app-informacion-laboral></app-informacion-laboral>
+        </p-tabPanel>
+        <p-tabPanel header="Datos Económicos">
+            <app-informacion-economica [catalogos]="catalogos" [alumno]="alumno"></app-informacion-economica>
+        </p-tabPanel>
+        <p-tabPanel header="Datos Escolares">
+            <app-informacion-escolar [catalogos]="catalogos" [alumno]="alumno"></app-informacion-escolar>
+        </p-tabPanel>
+    </p-tabView>
 </p-sidebar>
