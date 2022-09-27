@@ -7,9 +7,9 @@
   [responsiveOptions]="responsive"
 >
   <!-- <ng-template pTemplate="header"> Alumnos </ng-template> -->
-  <ng-template let-alumno pTemplate="item">
+  <ng-template class="flex sm:flex-shrink-1" let-alumno pTemplate="item">
     <div
-      class="flex product-item"
+      class="product-item"
       (click)="abrirMenu(); setSelected(alumno.matricula)"
     >
       <div
@@ -18,13 +18,9 @@
       >
         <div class="p-mb-3"></div>
         <div>
-          <img
-            class="product-image sm:flex-shrink-1"
-            [src]="alumno.img"
-            alt=""
-          />
-          <p class="matricula sm:flex-shrink-1">{{ alumno.matricula }}</p>
-          <p class="nombre sm:flex-shrink-1">{{ alumno.name }}</p>
+          <img class="product-image" [src]="alumno.img" alt="" />
+          <p class="matricula">{{ alumno.matricula }}</p>
+          <p class="nombre">{{ alumno.name }}</p>
         </div>
       </div>
     </div>
