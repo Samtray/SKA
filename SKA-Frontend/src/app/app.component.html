@@ -1,5 +1,5 @@
 <app-header></app-header>
 <app-wrapper>
-  <app-tarjetas></app-tarjetas>
-  <app-carrousel></app-carrousel>
+    <app-tarjetas *ngIf="esconderTarjetas"></app-tarjetas>
+    <app-carrousel (esconderTarjetas)="hideCards($event)"></app-carrousel>
 </app-wrapper>

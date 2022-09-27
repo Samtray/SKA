@@ -1,0 +1,113 @@
+<p-panel header="Datos del Padre" [toggleable]="true">
+    <div class="mt-1 p-fluid grid ">
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="padreNombre" [(ngModel)]="padreNombre">
+<label for="padreNombre">Nombre</label>
+</span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="padreOcupacion"  [(ngModel)]="padreOcupacion">
+<label for="padreOcupacion">Ocupación</label>
+</span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label mr-5">
+<p-inputMask mask="(999) 999-9999" inputId="padreTelefono"  [(ngModel)]="padreTelefono"></p-inputMask>
+<label for="padreTelefono">Teléfono</label>
+</span>
+        </div>
+
+    </div>
+</p-panel>
+
+<div style="margin-top: 10px;">
+    <p-panel header="Datos de la Madre" [toggleable]="true">
+        <div class="mt-1 p-fluid grid ">
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="madreNombre" [(ngModel)]="madreNombre">
+<label for="madreNombre">Nombre</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="madreOcupacion"  [(ngModel)]="madreOcupacion">
+<label for="madreOcupacion">Ocupación</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<p-inputMask mask="(999) 999-9999" inputId="madreTelefono"  [(ngModel)]="madreTelefono"></p-inputMask>
+<label for="madreTelefono">Teléfono</label>
+</span>
+            </div>
+
+        </div>
+    </p-panel>
+</div>
+
+<div style="margin-top: 10px;">
+    <p-panel header="Datos de el/la Cónyuge" [toggleable]="true">
+        <div class="mt-1 p-fluid grid ">
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="conyugeNombre" [(ngModel)]="conyugeNombre">
+<label for="conyugeNombre">Nombre</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="conyugeOcupacion" [(ngModel)]="conyugeOcupacion">
+<label for="conyugeOcupacion">Ocupación</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<p-inputMask mask="(999) 999-9999" inputId="conyugeTelefono" [(ngModel)]="conyugeTelefono"></p-inputMask>
+<label for="conyugeTelefono">Teléfono</label>
+</span>
+            </div>
+
+        </div>
+    </p-panel>
+</div>
+
+<div style="margin-top: 10px;">
+    <p-panel header="Datos en caso de Emergencia" [toggleable]="true">
+        <div class="mt-1 p-fluid grid ">
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="emergenciaNombre" [(ngModel)]="emergenciaNombre">
+<label for="emergenciaNombre">Nombre</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<input type="text" pInputText inputId="emergenciaParentezco"  [(ngModel)]="emergenciaParentezco">
+<label for="emergenciaParentezco">Parentezco</label>
+</span>
+            </div>
+
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label mr-5">
+<p-inputMask mask="(999) 999-9999" inputId="emergenciaTelefono"  [(ngModel)]="emergenciaTelefono"></p-inputMask>
+<label for="emergenciaTelefono">Teléfono</label>
+</span>
+            </div>
+
+        </div>
+    </p-panel>
+</div>
