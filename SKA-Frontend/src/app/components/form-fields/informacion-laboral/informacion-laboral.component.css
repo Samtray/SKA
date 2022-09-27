@@ -1,0 +1,22 @@
+:host ::ng-deep .p-checkbox .p-checkbox-box.p-highlight {
+    border-color: #66142a;
+    background: #66142a;
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box:hover {
+    border-color: #66142a;
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box:active:hover {
+    border-color: #66142a;
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box.p-focus {
+    border: 2px solid #66142a;
+    box-shadow: 0px 0px 0px 3px rgb(102, 20, 42, 0.3);
+}
+
+:host ::ng-deep .p-checkbox .p-checkbox-box.p-highlight.p-focus {
+    background: #66142a;
+    border: 2px solid #66142a;
+}
