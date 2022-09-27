@@ -40,12 +40,12 @@ export class CarrouselComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  abrirMenu(){
+  abrirMenu() {
     this.displayMenu = true;
     this.esconderTarjetas.emit(false);
   }
 
-  cerrarMenu(){
+  cerrarMenu() {
     this.displayMenu = false;
     this.esconderTarjetas.emit(true);
   }
@@ -122,198 +122,198 @@ const alumnos =
 const responsiveOptions = [
   {
     breakpoint: '1024px',
-    numVisible: 3,
-    numScroll: 3
+    numVisible: 5,
+    numScroll: 5
   },
   {
     breakpoint: '768px',
-    numVisible: 2,
-    numScroll: 2
+    numVisible: 5,
+    numScroll: 5
   },
   {
     breakpoint: '560px',
-    numVisible: 1,
-    numScroll: 1
+    numVisible: 5,
+    numScroll: 5
   }
-  ];
+];
 
 const catalogosFeik: catalogosInterface = {
   municipio: [
-      {
-          id: "MN-RST",
-          descripcion: "Rosarito"
-      },
-      {
-          id: "MN-TC",
-          descripcion: "Tecate"
-      },
-      {
-          id: "MN-TJ",
-          descripcion: "Tijuana"
-      }
+    {
+      id: "MN-RST",
+      descripcion: "Rosarito"
+    },
+    {
+      id: "MN-TC",
+      descripcion: "Tecate"
+    },
+    {
+      id: "MN-TJ",
+      descripcion: "Tijuana"
+    }
   ],
   genero: [
-      {
-          id: "GN-F",
-          descripcion: "Femenino"
-      },
-      {
-        id: "GN-M",
-          descripcion: "Masculino"
-      },
-      {
-        id: "GN-OND",
-          descripcion: "Otro/No definido"
-      }
+    {
+      id: "GN-F",
+      descripcion: "Femenino"
+    },
+    {
+      id: "GN-M",
+      descripcion: "Masculino"
+    },
+    {
+      id: "GN-OND",
+      descripcion: "Otro/No definido"
+    }
   ],
   estadoCivil: [
-      {
-          id: "EC-CSD",
-          descripcion: "Casado(a)"
-      },
-      {
-          id: "EC-DVR",
-          descripcion: "Divorciado(a)"
-      },
-      {
-          id: "EC-SLT",
-          descripcion: "Soltero(a)"
-      },
-      {
-          id: "EC-UL",
-          descripcion: "Unión Libre"
-      }
+    {
+      id: "EC-CSD",
+      descripcion: "Casado(a)"
+    },
+    {
+      id: "EC-DVR",
+      descripcion: "Divorciado(a)"
+    },
+    {
+      id: "EC-SLT",
+      descripcion: "Soltero(a)"
+    },
+    {
+      id: "EC-UL",
+      descripcion: "Unión Libre"
+    }
   ],
   razonTrabaja: [
-      {
-          id: "RT-AEF",
-          descripcion: "Apoyar Económicamente a la Familia"
-      },
-      {
-          id: "RT-ATF",
-          descripcion: "Apoyar Totalmente a la Familia"
-      },
-      {
-          id: "RT-SGI",
-          descripcion: "Solventar Algunos Gastos Personales"
-      },
-      {
-          id: "RT-ST",
-          descripcion: "Sostenerme Totalmente"
-      }
+    {
+      id: "RT-AEF",
+      descripcion: "Apoyar Económicamente a la Familia"
+    },
+    {
+      id: "RT-ATF",
+      descripcion: "Apoyar Totalmente a la Familia"
+    },
+    {
+      id: "RT-SGI",
+      descripcion: "Solventar Algunos Gastos Personales"
+    },
+    {
+      id: "RT-ST",
+      descripcion: "Sostenerme Totalmente"
+    }
   ],
   viveCon: [
-      {
-          id: "VC-AP",
-          descripcion: "Ambos Padres"
-      },
-      {
-          id: "VC-UP",
-          descripcion: "Uno de los Padres"
-      },
-      {
-          id: "VC-PRJ",
-          descripcion: "Pareja"
-      },
-      {
-          id: "VC-SL",
-          descripcion: "Solo(a)"
-      },
-      {
-          id: "VC-OF",
-          descripcion: "Otro Familiar"
-      },
-      {
-          id: "VC-AMG",
-          descripcion: "Amigos"
-      }
+    {
+      id: "VC-AP",
+      descripcion: "Ambos Padres"
+    },
+    {
+      id: "VC-UP",
+      descripcion: "Uno de los Padres"
+    },
+    {
+      id: "VC-PRJ",
+      descripcion: "Pareja"
+    },
+    {
+      id: "VC-SL",
+      descripcion: "Solo(a)"
+    },
+    {
+      id: "VC-OF",
+      descripcion: "Otro Familiar"
+    },
+    {
+      id: "VC-AMG",
+      descripcion: "Amigos"
+    }
   ],
   vivienda: [
-      {
-          id: "VD-PRP",
-          descripcion: "Propia"
-      },
-      {
-          id: "VD-RNT",
-          descripcion: "Rentada"
-      },
-      {
-          id: "VD-PRS",
-          descripcion: "Prestada"
-      }
+    {
+      id: "VD-PRP",
+      descripcion: "Propia"
+    },
+    {
+      id: "VD-RNT",
+      descripcion: "Rentada"
+    },
+    {
+      id: "VD-PRS",
+      descripcion: "Prestada"
+    }
   ],
   transporte: [
-      {
-          id: "TR-PRP",
-          descripcion: "Propio"
-      },
-      {
-          id: "TR-PBL",
-          descripcion: "Público"
-      }
+    {
+      id: "TR-PRP",
+      descripcion: "Propio"
+    },
+    {
+      id: "TR-PBL",
+      descripcion: "Público"
+    }
   ],
   apoyoEconomico: [
-      {
-          id: "AE-PDR",
-          descripcion: "Padre"
-      },
-      {
-          id: "AE-MDR",
-          descripcion: "Madre"
-      },
-      {
-          id: "AE-HRM",
-          descripcion: "Hermano(a)"
-      },
-      {
-          id: "AE-CNY",
-          descripcion: "Cónyuge"
-      },
-      {
-          id: "AE-OF",
-          descripcion: "Otro Familiar"
-      },
-      {
-          id: "AE-YO",
-          descripcion: "Yo"
-      }
+    {
+      id: "AE-PDR",
+      descripcion: "Padre"
+    },
+    {
+      id: "AE-MDR",
+      descripcion: "Madre"
+    },
+    {
+      id: "AE-HRM",
+      descripcion: "Hermano(a)"
+    },
+    {
+      id: "AE-CNY",
+      descripcion: "Cónyuge"
+    },
+    {
+      id: "AE-OF",
+      descripcion: "Otro Familiar"
+    },
+    {
+      id: "AE-YO",
+      descripcion: "Yo"
+    }
   ],
   ingresosFamiliares: [
-      {
-          id: "IF-ME5",
-          descripcion: "Menos de $5,000"
-      },
-      {
-          id: "IF-510",
-          descripcion: "$5,000 A $10,000"
-      },
-      {
-          id: "IF-1015",
-          descripcion: "$10,000 A $15,000"
-      },
-      {
-          id: "IF-MA15",
-          descripcion: "Más de $15,000"
-      }
+    {
+      id: "IF-ME5",
+      descripcion: "Menos de $5,000"
+    },
+    {
+      id: "IF-510",
+      descripcion: "$5,000 A $10,000"
+    },
+    {
+      id: "IF-1015",
+      descripcion: "$10,000 A $15,000"
+    },
+    {
+      id: "IF-MA15",
+      descripcion: "Más de $15,000"
+    }
   ],
   tipoBachillerato: [
-      {
-          id: "TB-PBL",
-          descripcion: "Escuela Pública (Oficial de Gobierno)"
-      },
-      {
-          id: "TB-PRV",
-          descripcion: "Privada o Particular"
-      }
+    {
+      id: "TB-PBL",
+      descripcion: "Escuela Pública (Oficial de Gobierno)"
+    },
+    {
+      id: "TB-PRV",
+      descripcion: "Privada o Particular"
+    }
   ],
   entidadFederativa: [
-      {
-          id: "AGC",
-          descripcion: "Aguascalientes"
-      },
-      {
-          id: "BC",
-          descripcion: "Baja California"
-      }
+    {
+      id: "AGC",
+      descripcion: "Aguascalientes"
+    },
+    {
+      id: "BC",
+      descripcion: "Baja California"
+    }
   ]
 }
