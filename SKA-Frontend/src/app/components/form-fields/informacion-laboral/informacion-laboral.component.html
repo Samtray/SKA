@@ -1,9 +1,51 @@
-<div class="field-checkbox">
+<div class="field-checkbox" (click)="checkCheckbox()">
     <p-checkbox [(ngModel)]="trabaja" [binary]="true" inputId="trabaja"></p-checkbox>
     <label for="trabaja">Trabaja</label>
 </div>
 
 <div class="field-checkbox">
-    <p-checkbox [(ngModel)]="trabajoRelacionado" [binary]="true" inputId="trabajoRelacionado"></p-checkbox>
+    <p-checkbox [(ngModel)]="trabajoRelacionado" [disabled]="!trabaja" [binary]="true" inputId="trabajoRelacionado"></p-checkbox>
     <label for="trabajoRelacionado">Trabajo Relacionado con sus Estudios</label>
 </div>
+
+<p-panel header="Información de la Empresa" [toggleable]="true" *ngIf="trabaja">
+    <div class="mt-1 p-fluid grid ">
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+<input type="text" pInputText inputId="empresaNombre" [(ngModel)]="empresaNombre">
+<label for="empresaNombre">Nombre</label>
+</span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+<input type="text" pInputText inputId="empresaDomicilo"  [(ngModel)]="empresaDomicilo">
+<label for="empresaDomicilo">Domicilio</label>
+</span>
+        </div>
+
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+<p-inputMask mask="(999) 999-9999" inputId="empresaTelefono"  [(ngModel)]="empresaTelefono"></p-inputMask>
+<label for="empresaTelefono">Teléfono</label>
+</span>
+        </div>
+
+        <div class="field col-12 md:col-6">
+            <span class="p-float-label">
+<input type="text" pInputText inputId="empresaPuesto"  [(ngModel)]="empresaPuesto">
+<label for="empresaPuesto">Puesto</label>
+</span>
+        </div>
+
+        <div class="field col-12 md:col-6">
+            <span class="p-float-label">
+<input type="text" pInputText inputId="empresaDepartamento"  [(ngModel)]="empresaDepartamento">
+<label for="empresaDepartamento">Departamento</label>
+</span>
+        </div>
+
+    </div>
+</p-panel>

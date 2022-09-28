@@ -1,0 +1,28 @@
+<p-panel header="Información Escolar" [toggleable]="true">
+    <div class="mt-1 p-fluid grid ">
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+<input type="text" pInputText inputId="bachilleratoNombre" [(ngModel)]="bachilleratoNombre">
+<label for="bachilleratoNombre">Nombre del Bachillerato</label>
+</span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+<p-dropdown inputId="tipoBachillerato" [autoDisplayFirst]="false"
+[options]="catalogos.tipoBachillerato" [(ngModel)]="tipoBachillerato" optionLabel="descripcion"></p-dropdown>
+<label for="tipoBachillerato">Tipo de Bachillerato</label>
+</span>
+        </div>
+
+        <div class="field col-12 md:col-4">
+            <span class="p-float-label">
+<p-dropdown inputId="entidadFederativa" [autoDisplayFirst]="false"
+[options]="catalogos.entidadFederativa" [(ngModel)]="entidadFederativa" optionLabel="descripcion"></p-dropdown>
+<label for="entidadFederativa">Entidad Federativa</label>
+</span>
+        </div>
+
+    </div>
+</p-panel>

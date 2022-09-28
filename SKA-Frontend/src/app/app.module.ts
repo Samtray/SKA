@@ -17,6 +17,8 @@ import { InformacionDomicilioComponent } from './components/form-fields/informac
 import { InformacionContactoComponent } from './components/form-fields/informacion-contacto/informacion-contacto.component';
 import { InformacionFamiliaresComponent } from './components/form-fields/informacion-familiares/informacion-familiares.component';
 import { InformacionLaboralComponent } from './components/form-fields/informacion-laboral/informacion-laboral.component';
+import { InformacionEconomicaComponent } from './components/form-fields/informacion-economica/informacion-economica.component';
+import { InformacionEscolarComponent } from './components/form-fields/informacion-escolar/informacion-escolar.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { InformacionLaboralComponent } from './components/form-fields/informacio
     InformacionContactoComponent,
     InformacionFamiliaresComponent,
     InformacionLaboralComponent,
+    InformacionEconomicaComponent,
+    InformacionEscolarComponent,
 
   ],
   imports: [
