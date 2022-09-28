@@ -19,6 +19,7 @@ import { InformacionFamiliaresComponent } from './components/form-fields/informa
 import { InformacionLaboralComponent } from './components/form-fields/informacion-laboral/informacion-laboral.component';
 import { InformacionEconomicaComponent } from './components/form-fields/informacion-economica/informacion-economica.component';
 import { InformacionEscolarComponent } from './components/form-fields/informacion-escolar/informacion-escolar.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { InformacionEscolarComponent } from './components/form-fields/informacio
     InformacionLaboralComponent,
     InformacionEconomicaComponent,
     InformacionEscolarComponent,
+    SpinnerComponent,
 
   ],
   imports: [

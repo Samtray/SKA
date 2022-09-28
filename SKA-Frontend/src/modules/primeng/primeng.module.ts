@@ -9,6 +9,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [],
@@ -21,7 +22,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     DropdownModule,
     InputMaskModule,
     InputTextModule,
-    CheckboxModule
+    CheckboxModule,
   ],
   exports: [
     CarouselModule,
@@ -32,7 +33,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     DropdownModule,
     InputMaskModule,
     InputTextModule,
-    CheckboxModule
+    CheckboxModule,
+    ProgressSpinnerModule
   ]
 })
 export class PrimengModule { }

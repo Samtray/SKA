@@ -20,7 +20,9 @@
       <mat-icon class="icon">close</mat-icon>
     </button>
     </div>
-    <p-tabView>
+    <app-spinner *ngIf="loading" [mainPage]="false"></app-spinner>
+
+    <p-tabView *ngIf="!loading">
         <p-tabPanel header="Datos Personales">
             <app-informacion-personal [catalogos]="catalogos" [alumno]="alumno"></app-informacion-personal>
             <app-informacion-domicilio [catalogos]="catalogos" [alumno]="alumno"></app-informacion-domicilio>

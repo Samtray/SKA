@@ -35,6 +35,8 @@ export class CarrouselComponent implements OnInit {
 
   catalogos = catalogosFeik;
 
+  loading = false;
+
   constructor() { }
 
   ngOnInit(): void {
