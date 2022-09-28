@@ -115,6 +115,11 @@ const alumnos =
       name: "Torrecilas Beltrán Jesús Gustavo",
       img: "https://randomuser.me/api/portraits/men/1.jpg",
       matricula: "0319124972"
+    },
+    {
+      name: "Torrecilas Beltrán Jesús Gustavo",
+      img: "https://randomuser.me/api/portraits/men/1.jpg",
+      matricula: "0319124972"
     }
 
   ]
@@ -127,13 +132,18 @@ const responsiveOptions = [
   },
   {
     breakpoint: '768px',
-    numVisible: 5,
-    numScroll: 5
+    numVisible: 3,
+    numScroll: 3
   },
   {
     breakpoint: '560px',
-    numVisible: 5,
-    numScroll: 5
+    numVisible: 2,
+    numScroll: 2
+  },
+  {
+    breakpoint: '375px',
+    numVisible: 2,
+    numScroll: 2
   }
 ];
 
