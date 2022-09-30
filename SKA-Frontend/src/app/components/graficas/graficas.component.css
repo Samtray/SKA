@@ -1,12 +1,71 @@
+.allcharts{
+    margin-top: 20px;
+}
 .card{
     height: 400px;
-    width: 600px;
     background: white;
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.test{
-    width: 700px;
+.donutCard{
+    height: 400px;
+    background: white;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.duangalesingle{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.generoVive{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+
+#quandaleincome{
+    width:40%;
+}
+#quandalelabor{
+    width:20%;
+}
+#quandalereason{
+    margin: auto;
+    width: 40%;
+    /* margin-top: 20px; */
+}
+
+
+#quandalegender{
+    width: 30%;
+}
+#quandaleliveswith{
+    width: 60%;
+}
+#quandalehighschool{
+    width:30%;
+}
+
+
+#quandalewhichschool{
+    width: 40%;
+}
+#quandalegradeson{
+    width: 40%;
+}
+#quandaleaverage{
+    width: 20%;
 }

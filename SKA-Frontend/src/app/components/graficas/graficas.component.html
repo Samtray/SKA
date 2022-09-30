@@ -1,28 +1,49 @@
+<div class="allcharts">
 
-<div class="card">
-    <div echarts [options]="generoViveChart"></div>
-</div>
+    <div class="quandalepringle">
+        <div class="duangalesingle">
+            <div class="card" id="quandaleincome">
+                <div echarts [options]="ingresosChart"></div>
+            </div>
 
-<div class="card">
-    <div echarts [options]="viveconChart"></div>
-</div>
+            <div class="donutCard" id="quandalelabor">
+                <div echarts [options]="laborChart"></div>
+            </div>
 
-<div class="card test">
-    <div echarts [options]="ingresosChart"></div>
-</div>
+            <div class="card" id="quandalereason">
+                <div echarts [options]="razonTrabajaChart"></div>
+            </div>
+            
+        </div>
+    </div>
 
-<div class="card">
-    <div echarts [options]="laborChart"></div>
-</div>
+    <div class="generoVive">
+        <div class="donutCard" id="quandalegender">
+            <div echarts [options]="generoViveChart" class="test"></div>
+        </div>
 
-<div class="card test">
-    <div echarts [options]="razonTrabajaChart"></div>
-</div>
+        <div class="card" id="quandaleliveswith">
+            <div echarts [options]="viveconChart"></div>
+        </div>
+        
+        <div class="donutCard" id="quandalehighschool">
+            <div echarts [options]="bachillerChart"></div>
+        </div>
+    </div>
 
-<div class="card">
-    <div echarts [options]="bachillerChart"></div>
-</div>
 
-<div class="card test">
-    <div echarts [options]="bachilleratosChart"></div>
+    <div class="duangalesingle">
+        <div class="card" id="quandalewhichschool">
+            <div echarts [options]="bachilleratosChart"></div>
+        </div>
+
+        <div class="card" id="quandaleaverage">
+            <div echarts [options]="promediosChart"></div>
+        </div>
+
+        <div class="card" id="quandalegradeson">
+            <div echarts [options]="gradeChart"></div>
+        </div>
+    </div>
+
 </div>

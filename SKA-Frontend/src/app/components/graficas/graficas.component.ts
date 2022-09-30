@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
+import {CarouselModule} from 'primeng/carousel';
 type EChartsOption = echarts.EChartsOption
 
 @Component({
@@ -11,6 +12,11 @@ type EChartsOption = echarts.EChartsOption
 export class GraficasComponent implements OnInit {
 
   generoViveChart: EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
     tooltip: {
       trigger: 'item',
       formatter: '{a} <br/>{b}: {c} ({d}%)'
@@ -21,7 +27,9 @@ export class GraficasComponent implements OnInit {
         'Femenino',
         'Soltero(a)',
         'Unión Libre',
-      ]
+      ],
+      orient: 'vertical',
+      left: 'left',
     },
     series: [
       {
@@ -85,6 +93,11 @@ export class GraficasComponent implements OnInit {
   };
 
   viveconChart: EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -116,14 +129,17 @@ export class GraficasComponent implements OnInit {
         name: 'Cantidad',
         type: 'bar',
         barWidth: '60%',
-        data: [18,7,2,2],
-        itemStyle: {
-          color: '#2a9d8f'
-        }
+        data: [{value:18,itemStyle: {color: '#2a9d8f'}},{value:7,itemStyle: {color: '#2a9d8f'}},{value:2,itemStyle: {color: '#2a9d8f'}},{value:2,itemStyle: {color: '#2a9d8f'}}],
+
       }
     ]
   }
   ingresosChart: EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -161,6 +177,11 @@ export class GraficasComponent implements OnInit {
   }
 
   laborChart:EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
     tooltip: {
       trigger: 'item',
       formatter: '{a} <br/>{b}: {c} ({d}%)'
@@ -171,7 +192,8 @@ export class GraficasComponent implements OnInit {
         'Femenino',
         'Soltero(a)',
         'Unión Libre',
-      ]
+      ],
+
     },
     series: [
       {
@@ -235,6 +257,11 @@ export class GraficasComponent implements OnInit {
   }
 
   razonTrabajaChart: EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -255,7 +282,7 @@ export class GraficasComponent implements OnInit {
           alignWithLabel: true
         },
         axisLabel: {
-          rotate: 45,
+          rotate: 0 ,
         },
       }
     ],
@@ -308,6 +335,11 @@ export class GraficasComponent implements OnInit {
   }
 
   bachilleratosChart: EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -346,6 +378,87 @@ export class GraficasComponent implements OnInit {
       }
     ]
   }
+
+  gradeChart: EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        data: ['TSU1', 'TSU2', 'TSU3', 'TSU4','TSU5','TSU6','ING7','ING8'],
+        axisTick: {
+          alignWithLabel: true
+        },
+        axisLabel: {
+          rotate: 0,
+        },
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [
+      {
+        name: 'Cantidad',
+        type: 'bar',
+        barWidth: '60%',
+        data: [8.9,9.0,8.7,8.6,9.1,9.2,9.3,8.9]
+      }
+    ]
+  }
+
+  promediosChart:EChartsOption = {
+    title: {
+      text: 'Datos Escolares',
+      subtext: 'Tipo de Bachillerato',
+      left: 'center'
+    },
+    tooltip: {
+      trigger: 'item'
+    },
+    legend: {
+      orient: 'vertical',
+      left: 'left'
+    },
+    series: [
+      {
+        name: 'Access From',
+        type: 'pie',
+        radius: '50%',
+        data: [
+          { value: 8.4, name: 'Bachillerato' },
+          { value: 9.0, name: 'TSU' },
+          { value: 9.1, name: 'Ingeniería' }
+        ],
+        emphasis: {
+          itemStyle: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)'
+          }
+        }
+      }
+    ]
+  }
+
+  
 
 
   constructor() { }
