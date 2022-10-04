@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'SKA-Frontend';
 
   esconderTarjetas: boolean = true;
+  loading = false;
 
   hideCards(event: boolean){
     this.esconderTarjetas = event;

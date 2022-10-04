@@ -19,7 +19,9 @@ import { InformacionFamiliaresComponent } from './components/form-fields/informa
 import { InformacionLaboralComponent } from './components/form-fields/informacion-laboral/informacion-laboral.component';
 import { InformacionEconomicaComponent } from './components/form-fields/informacion-economica/informacion-economica.component';
 import { InformacionEscolarComponent } from './components/form-fields/informacion-escolar/informacion-escolar.component';
-
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { InformacionEscolarComponent } from './components/form-fields/informacio
     InformacionLaboralComponent,
     InformacionEconomicaComponent,
     InformacionEscolarComponent,
+    SpinnerComponent,
 
   ],
   imports: [
@@ -45,7 +48,10 @@ import { InformacionEscolarComponent } from './components/form-fields/informacio
     BrowserAnimationsModule,
     MaterialModule,
     PrimengModule,
-    FormsModule
+    FormsModule,
+    NgxEchartsModule.forRoot({
+      echarts
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
