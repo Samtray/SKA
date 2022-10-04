@@ -5,6 +5,13 @@
   text-align: center;
   padding: 2rem 0;
   height: 245px;
+  background-color: white;
+}
+
+@media screen and (max-width: 1920px) {
+  .product-item-content {
+    height: 260px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -54,7 +61,7 @@
 /*/////// Menu ///////*/
 
 :host ::ng-deep .p-sidebar-bottom.p-sidebar-sm {
-    height: 56vh;
+  height: 56vh;
 }
 
 :host ::ng-deep .p-sidebar {
