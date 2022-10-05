@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {CarouselModule} from 'primeng/carousel';
 type EChartsOption = echarts.EChartsOption
-
 @Component({
   selector: 'app-graficas',
   templateUrl: './graficas.component.html',
@@ -129,7 +128,7 @@ export class GraficasComponent implements OnInit {
         name: 'Cantidad',
         type: 'bar',
         barWidth: '60%',
-        data: [{value:18,itemStyle: {color: '#2a9d8f'}},{value:7,itemStyle: {color: '#2a9d8f'}},{value:2,itemStyle: {color: '#2a9d8f'}},{value:2,itemStyle: {color: '#2a9d8f'}}],
+        data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}],
 
       }
     ]
@@ -171,7 +170,7 @@ export class GraficasComponent implements OnInit {
         name: 'Cantidad',
         type: 'bar',
         barWidth: '60%',
-        data: [18,7,2,2]
+        data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
       }
     ]
   }
@@ -282,7 +281,7 @@ export class GraficasComponent implements OnInit {
           alignWithLabel: true
         },
         axisLabel: {
-          rotate: 0 ,
+          rotate: 10 ,
         },
       }
     ],
@@ -296,7 +295,7 @@ export class GraficasComponent implements OnInit {
         name: 'Cantidad',
         type: 'bar',
         barWidth: '60%',
-        data: [4,3,1,1]
+        data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
       }
     ]
   }
@@ -374,7 +373,7 @@ export class GraficasComponent implements OnInit {
         name: 'Cantidad',
         type: 'bar',
         barWidth: '60%',
-        data: [6,5,5,4,2,7,8]
+        data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
       }
     ]
   }
@@ -419,7 +418,7 @@ export class GraficasComponent implements OnInit {
         name: 'Cantidad',
         type: 'bar',
         barWidth: '60%',
-        data: [8.9,9.0,8.7,8.6,9.1,9.2,9.3,8.9]
+        data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
       }
     ]
   }
@@ -458,25 +457,11 @@ export class GraficasComponent implements OnInit {
     ]
   }
 
-  
-
 
   constructor() { }
   data:any;
+
   ngOnInit(): void {
-    this.data = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [
-          {
-              label: 'First Dataset',
-              data: [65, 59, 80, 81, 56, 55, 40]
-          },
-          {
-              label: 'Second Dataset',
-              data: [28, 48, 40, 19, 86, 27, 90]
-          }
-      ]
-  }
 
   }
 
