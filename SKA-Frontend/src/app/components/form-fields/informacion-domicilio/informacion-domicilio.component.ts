@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Alumno } from 'src/app/models/alumno';
-import { ICatalogos } from 'src/app/models/catalogos';
+import { CatalogosPlaceholder, ICatalogos } from 'src/app/models/catalogos';
 
 @Component({
   selector: 'app-informacion-domicilio',
   templateUrl: './informacion-domicilio.component.html',
   styleUrls: ['./informacion-domicilio.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class InformacionDomicilioComponent implements OnInit {
 

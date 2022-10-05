@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { combineLatest, map, tap } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { combineLatest, map } from 'rxjs';
 import { } from './components/carrousel/carrousel.component';
 import { CatalogoGenerico } from './models/alumno';
 import { ICatalogos } from './models/catalogos';
-import { IGrupo, Grupo } from './models/grupo';
+import { IGrupo } from './models/grupo';
 import { ApiService } from './services/api.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.loading = true;
     combineLatest({
       catalogos: this.apiService.getCatalogos(),
       grupo: this.apiService.getGrupo(),
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit {
       .subscribe((data) => {
         this.catalogos = data[1]
         this.grupo = data[0]
-        console.log(data);
+        this.loading = false;
       });
   }
 
