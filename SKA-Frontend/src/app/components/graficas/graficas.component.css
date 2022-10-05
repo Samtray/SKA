@@ -7,6 +7,7 @@
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .donutcord{
@@ -15,6 +16,7 @@
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
+    padding: 10px;
 }
 
 
@@ -24,7 +26,6 @@
     flex-direction: row;
     gap: 20px;
     justify-content: center;
-
 }
 
 .generoVive{
@@ -74,10 +75,167 @@
     width: 100%;
     height: 500px;
     margin-right: 10px;
-  }
+}
   
 .gallery{
     margin-top:10px;
     margin-left:auto;
     margin-right:auto;
+}
+
+@media only screen and (min-width: 1366px) {
+    #quandalelabor{
+        width:30%;
+    }
+    .resize{
+        height: 400px;
+    }
+
+    .gallery-cell {
+        height: 400px;
+
+    }
+
+}
+
+@media only screen and (max-width: 1365px) {
+    #quandalelabor{
+        width:40%;
+    }
+    .resize{
+        height: 300px;
+    }
+
+    .gallery-cell {
+        height: 300px;
+
+    }
+    .cord{
+        height: 400px;
+    }
+    .donutcord{
+        height: 400px;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 975px) {
+
+    .cord{
+        height: 200px;
+    }
+    .donutcord{
+        height: 200px;
+    }
+
+    .resize{
+        height: 200px;
+    }
+
+    .gallery-cell {
+        height: 200px;
+
+    }
+
+}
+
+@media only screen and (max-width: 750px) {
+
+    .duangalesingle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .generoVive{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .gallery-cell {
+        height: 1300px;
+    }
+
+    .cord{
+        height: 400px;
+        width: 100%;
+    }
+    .donutcord{
+        height: 400px;
+        width: 100%;
+    }
+
+    .resize{
+        height: 400px;
+        width: 100%;
+    }
+
+    #quandaleincome{
+        margin: auto;
+        width:100%;
+    }
+    #quandalelabor{
+        margin: auto;
+        width:100%;
+    }
+    #quandalereason{
+        margin: auto;
+        width:100%;
+        /* margin-top: 20px; */
+    }
+    
+    
+    #quandalegender{
+        margin: auto;
+        width:100%;
+    }
+    #quandaleliveswith{
+        margin: auto;
+        width:100%;
+    }
+    #quandalehighschool{
+        margin: auto;
+        width:100%;
+    }
+    
+    
+    #quandalewhichschool{
+        margin: auto;
+        width:100%;
+    }
+    #quandalegradeson{
+        margin: auto;
+        width:100%;
+    }
+    #quandaleaverage{
+        margin: auto;
+        width:100%;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .gallery-cell {
+        height: 1000px;
+    }
+
+    .cord{
+        height: 300px;
+        width: 100%;
+    }
+    .donutcord{
+        height: 300px;
+        width: 100%;
+    }
+
+    .resize{
+        height: 300px;
+        width: 100%;
+    }
+
 }

@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {CarouselModule} from 'primeng/carousel';
 type EChartsOption = echarts.EChartsOption
+var colorPalette = ['#5B8E7D', '#BC4B51','#F4E285'];
 @Component({
   selector: 'app-graficas',
   templateUrl: './graficas.component.html',
@@ -12,15 +13,15 @@ export class GraficasComponent implements OnInit {
 
   generoViveChart: EChartsOption = {
     title: {
-      text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      text: 'Datos Personales',
+      subtext: 'Genero y estado civil',
       left: 'center'
     },
     tooltip: {
       trigger: 'item',
       formatter: '{a} <br/>{b}: {c} ({d}%)'
     },
-    legend: {
+    /*legend: {
       data: [
         'Masculino',
         'Femenino',
@@ -29,7 +30,7 @@ export class GraficasComponent implements OnInit {
       ],
       orient: 'vertical',
       left: 'left',
-    },
+    },*/
     series: [
       {
         name: 'Genero',
@@ -46,10 +47,11 @@ export class GraficasComponent implements OnInit {
         data: [
           { value: 22, name: 'Masculino' },
           { value: 7, name: 'Femenino', selected: true }
-        ]
+        ],
+        color:colorPalette
       },
       {
-        name: 'Vive con',
+        name: 'Estado Civil',
         type: 'pie',
         radius: ['45%', '60%'],
         labelLine: {
@@ -86,15 +88,16 @@ export class GraficasComponent implements OnInit {
           { value: 28, name: 'Soltero(a)' },
           { value: 1, name: 'Unión Libre' },
 
-        ]
+        ],
+        color:colorPalette
       }
     ]
   };
 
   viveconChart: EChartsOption = {
     title: {
-      text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      text: 'Datos Personales',
+      subtext: 'Con quién vive',
       left: 'center'
     },
     tooltip: {
@@ -135,8 +138,8 @@ export class GraficasComponent implements OnInit {
   }
   ingresosChart: EChartsOption = {
     title: {
-      text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      text: 'Datos Personales',
+      subtext: 'Ingresos Familiares',
       left: 'center'
     },
     tooltip: {
@@ -177,15 +180,15 @@ export class GraficasComponent implements OnInit {
 
   laborChart:EChartsOption = {
     title: {
-      text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      text: 'Datos Laborales',
+      subtext: 'Trabajo y Relación de trabajo',
       left: 'center'
     },
     tooltip: {
       trigger: 'item',
       formatter: '{a} <br/>{b}: {c} ({d}%)'
     },
-    legend: {
+    /*legend: {
       data: [
         'Masculino',
         'Femenino',
@@ -193,7 +196,7 @@ export class GraficasComponent implements OnInit {
         'Unión Libre',
       ],
 
-    },
+    },*/
     series: [
       {
         name: 'Trabajan',
@@ -210,7 +213,8 @@ export class GraficasComponent implements OnInit {
         data: [
           { value: 9, name: 'Si', selected: true  },
           { value: 20, name: 'No',}
-        ]
+        ],
+        color:colorPalette
       },
       {
         name: 'Relacionado con Estudios',
@@ -222,7 +226,7 @@ export class GraficasComponent implements OnInit {
         label: {
           rich: {
             a: {
-              color: '#6E7079',
+              color: '#BC4B51',
               lineHeight: 22,
               align: 'center'
             },
@@ -233,14 +237,14 @@ export class GraficasComponent implements OnInit {
               height: 0
             },
             b: {
-              color: '#4C5058',
+              color: '#BC4B51',
               fontSize: 14,
               fontWeight: 'bold',
               lineHeight: 33
             },
             per: {
               color: '#fff',
-              backgroundColor: '#4C5058',
+              backgroundColor: '#BC4B51',
               padding: [3, 4],
               borderRadius: 4
             }
@@ -257,8 +261,8 @@ export class GraficasComponent implements OnInit {
 
   razonTrabajaChart: EChartsOption = {
     title: {
-      text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      text: 'Datos Laborales',
+      subtext: 'Razón de Trabajo',
       left: 'center'
     },
     tooltip: {
@@ -309,10 +313,10 @@ export class GraficasComponent implements OnInit {
     tooltip: {
       trigger: 'item'
     },
-    legend: {
+    /*legend: {
       orient: 'vertical',
       left: 'left'
-    },
+    },*/
     series: [
       {
         name: 'Access From',
@@ -322,6 +326,7 @@ export class GraficasComponent implements OnInit {
           { value: 27, name: 'Escuela publica' },
           { value: 2, name: 'Escuela Privada' }
         ],
+        color:colorPalette,
         emphasis: {
           itemStyle: {
             shadowBlur: 10,
@@ -336,7 +341,7 @@ export class GraficasComponent implements OnInit {
   bachilleratosChart: EChartsOption = {
     title: {
       text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      subtext: 'Bachilleratos',
       left: 'center'
     },
     tooltip: {
@@ -381,7 +386,7 @@ export class GraficasComponent implements OnInit {
   gradeChart: EChartsOption = {
     title: {
       text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      subtext: 'Calificación por cuatrimestre',
       left: 'center'
     },
     tooltip: {
@@ -426,16 +431,16 @@ export class GraficasComponent implements OnInit {
   promediosChart:EChartsOption = {
     title: {
       text: 'Datos Escolares',
-      subtext: 'Tipo de Bachillerato',
+      subtext: 'Promedios',
       left: 'center'
     },
     tooltip: {
       trigger: 'item'
     },
-    legend: {
+    /*legend: {
       orient: 'vertical',
       left: 'left'
-    },
+    },*/
     series: [
       {
         name: 'Access From',
@@ -446,6 +451,7 @@ export class GraficasComponent implements OnInit {
           { value: 9.0, name: 'TSU' },
           { value: 9.1, name: 'Ingeniería' }
         ],
+        color:colorPalette,
         emphasis: {
           itemStyle: {
             shadowBlur: 10,
