@@ -1,6 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {CarouselModule} from 'primeng/carousel';
+import { IGrupo } from 'src/app/models/grupo';
+import { ApiService } from 'src/app/services/api.service';
 type EChartsOption = echarts.EChartsOption
 var colorPalette = ['#5B8E7D', '#BC4B51','#F4E285'];
 @Component({
@@ -10,6 +12,10 @@ var colorPalette = ['#5B8E7D', '#BC4B51','#F4E285'];
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GraficasComponent implements OnInit {
+  @Input() set grupo(value: IGrupo) {
+    this.estadisticas = value?.estadisticas
+  }
+  estadisticas: any;
   ingresosChart!: EChartsOption; 
   laborChart!:EChartsOption;
   razonTrabajaChart!: EChartsOption;
@@ -20,7 +26,14 @@ export class GraficasComponent implements OnInit {
   promediosChart!:EChartsOption; 
   gradeChart!: EChartsOption;
 
-  constructor() { }
+  datosPersonales:any;
+  datosEscolares:any;
+  datosLaborales:any;
+
+  cargando:boolean=true;
+
+
+  constructor( private ApiService:ApiService) { }
 
 
   ngOnInit(): void {
@@ -28,17 +41,29 @@ export class GraficasComponent implements OnInit {
   }
 
   iniciarGraficas(){
-    this.chartIngresos();
-    this.chartTrabajo();
-    this.trabajoRazonChart();
+    this.cargando=false
+    this.ApiService.getGrupo().subscribe(data =>{
+      this.estadisticas = data;
+      console.log(this.estadisticas);
+      this.datosPersonales=this.estadisticas.estadisticas.datosPersonales;
+      this.datosEscolares=this.estadisticas.estadisticas.datosPersonales;
+      this.datosLaborales=this.estadisticas.estadisticas.datosPersonales;
 
-    this.generoCivilChart();
-    this.habitarChart();
-    this.TipoPrepasChart();
+      console.log(this.datosPersonales.ingresosFamiliares[0].cantidad);
+      this.chartIngresos();
 
-    this.prepasChart();
-    this.promedioChart();
-    this.calificacionesChart();
+
+  });
+  this.cargando=true;
+
+  this.chartTrabajo();
+  this.trabajoRazonChart();
+  this.generoCivilChart();
+  this.habitarChart();
+  this.TipoPrepasChart();
+  this.prepasChart();
+  this.promedioChart();
+  this.calificacionesChart();
   }
   
   chartIngresos(){
@@ -79,7 +104,7 @@ export class GraficasComponent implements OnInit {
           name: 'Cantidad',
           type: 'bar',
           barWidth: '60%',
-          data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
+          data: [{value:18 ,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
         }
       ]
     }

@@ -114,7 +114,7 @@
   <div class="gallery js-flickity" data-flickity='{ "pageDots": false }'>
     <div class="gallery-cell">
         <div class="duangalesingle">
-            <div class="cord" id="quandaleincome">
+            <div class="cord" id="quandaleincome" *ngIf="cargando">
                 <div echarts [options]="ingresosChart" class="resize"></div>
             </div>
 
