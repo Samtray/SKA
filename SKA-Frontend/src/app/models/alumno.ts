@@ -40,6 +40,7 @@ export interface CatalogoGenerico {
 }
 
 export interface DatosEscolares {
+  nombreBachillerato: string;
   tipoBachillerato:  CatalogoGenerico;
   entidadFederativa: CatalogoGenerico;
 }
@@ -72,7 +73,7 @@ export interface Empresa {
 }
 
 export interface DatosPersonales {
-  fechaNacimiento:   Date;
+  fechaNacimiento:   String;
   edad:              number;
   lugarDeNacimiento: LugarDeNacimiento;
   genero:            CatalogoGenerico;

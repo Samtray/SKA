@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Alumno } from 'src/app/models/alumno';
 
 @Component({
   selector: 'app-informacion-contacto',
@@ -8,12 +9,19 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 })
 export class InformacionContactoComponent implements OnInit {
 
-  @Input() alumno!: any;
-
   correoPersonal: any;
   correoInstitucional: any;
   telefonoCasa: any;
   telefonoMovil: any;
+
+  @Input() set alumno(value: Alumno){
+    let contacto = value?.datosPersonales.contacto
+
+    this.correoPersonal = contacto?.correoElectronico.personal;
+    this.correoInstitucional = contacto?.correoElectronico.institucional;
+    this.telefonoCasa = contacto?.telefono.casa;
+    this.telefonoMovil = contacto?.telefono.movil;
+  };
 
   constructor() { }
 

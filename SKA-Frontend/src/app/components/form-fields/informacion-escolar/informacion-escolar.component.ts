@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Alumno } from 'src/app/models/alumno';
 import { ICatalogos } from 'src/app/models/catalogos';
 
 @Component({
@@ -9,12 +10,18 @@ import { ICatalogos } from 'src/app/models/catalogos';
 })
 export class InformacionEscolarComponent implements OnInit {
 
-  @Input() catalogos!: ICatalogos;
-  @Input() alumno!: any;
-
   bachilleratoNombre: any;
   tipoBachillerato: any;
   entidadFederativa: any;
+
+  @Input() catalogos!: ICatalogos;
+  @Input() set alumno(value: Alumno){
+    let escolar = value.datosEscolares;
+
+    this.bachilleratoNombre = escolar?.nombreBachillerato
+    this.tipoBachillerato = escolar?.tipoBachillerato
+    this.entidadFederativa = escolar?.entidadFederativa
+  };
 
   constructor() { }
 
