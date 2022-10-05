@@ -16,7 +16,7 @@ export class InformacionEscolarComponent implements OnInit {
 
   @Input() catalogos!: ICatalogos;
   @Input() set alumno(value: Alumno){
-    let escolar = value.datosEscolares;
+    let escolar = value?.datosEscolares;
 
     this.bachilleratoNombre = escolar?.nombreBachillerato
     this.tipoBachillerato = escolar?.tipoBachillerato
