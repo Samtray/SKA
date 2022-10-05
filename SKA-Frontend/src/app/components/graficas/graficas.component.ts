@@ -9,21 +9,23 @@ var colorPalette = ['#5B8E7D', '#BC4B51','#F4E285'];
   selector: 'app-graficas',
   templateUrl: './graficas.component.html',
   styleUrls: ['./graficas.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class GraficasComponent implements OnInit {
+
   @Input() set grupo(value: IGrupo) {
     this.estadisticas = value?.estadisticas
   }
+
   estadisticas: any;
-  ingresosChart!: EChartsOption; 
+  ingresosChart!: EChartsOption;
   laborChart!:EChartsOption;
   razonTrabajaChart!: EChartsOption;
   generoViveChart!: EChartsOption;
-  viveconChart!: EChartsOption; 
+  viveconChart!: EChartsOption;
   bachillerChart!:EChartsOption;
   bachilleratosChart!: EChartsOption;
-  promediosChart!:EChartsOption; 
+  promediosChart!:EChartsOption;
   gradeChart!: EChartsOption;
 
   datosPersonales:any;
@@ -35,38 +37,29 @@ export class GraficasComponent implements OnInit {
 
   constructor( private ApiService:ApiService) { }
 
-
   ngOnInit(): void {
     this.iniciarGraficas();
   }
 
   iniciarGraficas(){
-    this.cargando=false
-    this.ApiService.getGrupo().subscribe(data =>{
+  this.ApiService.getGrupo().subscribe(data =>{
       this.estadisticas = data;
-      console.log(this.estadisticas);
-      this.datosPersonales=this.estadisticas.estadisticas.datosPersonales;
-      this.datosEscolares=this.estadisticas.estadisticas.datosPersonales;
-      this.datosLaborales=this.estadisticas.estadisticas.datosPersonales;
-
-      console.log(this.datosPersonales.ingresosFamiliares[0].cantidad);
-      this.chartIngresos();
-
-
+      this.chartIngresos(this.estadisticas.estadisticas.datosPersonales.ingresosFamiliares[0].cantidad);
   });
-  this.cargando=true;
-
-  this.chartTrabajo();
-  this.trabajoRazonChart();
-  this.generoCivilChart();
-  this.habitarChart();
-  this.TipoPrepasChart();
-  this.prepasChart();
-  this.promedioChart();
-  this.calificacionesChart();
   }
-  
-  chartIngresos(){
+
+  iniciarGraficas2(){
+    this.chartTrabajo();
+    this.trabajoRazonChart();
+    this.generoCivilChart();
+    this.habitarChart();
+    this.TipoPrepasChart();
+    this.prepasChart();
+    this.promedioChart();
+    this.calificacionesChart();
+  }
+
+  chartIngresos(number: 1){
     this.ingresosChart = {
       title: {
         text: 'Datos Personales',
@@ -104,7 +97,7 @@ export class GraficasComponent implements OnInit {
           name: 'Cantidad',
           type: 'bar',
           barWidth: '60%',
-          data: [{value:18 ,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
+          data: [{value: number,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
         }
       ]
     }
@@ -128,7 +121,7 @@ export class GraficasComponent implements OnInit {
           'Soltero(a)',
           'Unión Libre',
         ],
-  
+
       },*/
       series: [
         {
@@ -186,7 +179,7 @@ export class GraficasComponent implements OnInit {
           data: [
             { value: 5, name: 'Si' },
             { value: 4, name: 'No' },
-  
+
           ]
         }
       ]
@@ -240,7 +233,7 @@ export class GraficasComponent implements OnInit {
     }
   }
 
-  
+
   generoCivilChart() {
     this.generoViveChart = {
       title: {
@@ -318,7 +311,7 @@ export class GraficasComponent implements OnInit {
           data: [
             { value: 28, name: 'Soltero(a)' },
             { value: 1, name: 'Unión Libre' },
-  
+
           ],
           color:colorPalette
         }
@@ -365,7 +358,7 @@ export class GraficasComponent implements OnInit {
           type: 'bar',
           barWidth: '60%',
           data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}],
-  
+
         }
       ]
     }
@@ -489,7 +482,7 @@ export class GraficasComponent implements OnInit {
         }
       ]
     }
-  
+
   }
 
   calificacionesChart(){
