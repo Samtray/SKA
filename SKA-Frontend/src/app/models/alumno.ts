@@ -1,4 +1,4 @@
-export interface Welcome {
+export interface Alumno {
   matricula:       string;
   nombreCompleto:  string;
   foto:            string;

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { catalogosInterface } from '../../carrousel/carrousel.component';
+import { ICatalogos } from 'src/app/models/catalogos';
 
 @Component({
   selector: 'app-informacion-personal',
@@ -9,7 +9,7 @@ import { catalogosInterface } from '../../carrousel/carrousel.component';
 })
 export class InformacionPersonalComponent implements OnInit {
 
-  @Input() catalogos!: catalogosInterface;
+  @Input() catalogos!: ICatalogos;
   @Input() alumno!: any;
 
   fechaDeNacimiento: any;
