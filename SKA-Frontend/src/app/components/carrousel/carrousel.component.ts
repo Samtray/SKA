@@ -18,7 +18,7 @@ export class CarrouselComponent implements OnInit {
     this.grupoAlumnos = value?.alumnos
   }
   grupoAlumnos: any[] = []
-  alumno = alumnos;
+  img = imgs
   selectedAlumno!: any;
   responsive = responsiveOptions;
   displayMenu: boolean = false;
@@ -70,72 +70,47 @@ export class CarrouselComponent implements OnInit {
   }
 }
 
-const alumnos =
+const imgs: any =
   [
     {
-      name: "Alcaraz Ibarra Ahmed Fabian",
-      img: "https://randomuser.me/api/portraits/men/12.jpg",
-      matricula: "0319100123"
+      photo: "https://randomuser.me/api/portraits/men/12.jpg"
     },
     {
-      name: "Lozano Almanza Miguel Angel",
-      img: "https://randomuser.me/api/portraits/men/14.jpg",
-      matricula: "0319124962"
+      photo: "https://randomuser.me/api/portraits/men/14.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124963"
+      photo: "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
-      name: "Castellanos Salgado Samuel Antonio ",
-      img: "https://randomuser.me/api/portraits/men/10.jpg",
-      matricula: "0319124964"
+      photo: "https://randomuser.me/api/portraits/men/10.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124965"
+      photo: "https://randomuser.me/api/portraits/men/11.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124966"
+      photo: "https://randomuser.me/api/portraits/men/13.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124967"
+      photo: "https://randomuser.me/api/portraits/men/15.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124968"
+      photo: "https://randomuser.me/api/portraits/men/16.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124969"
+      photo: "https://randomuser.me/api/portraits/men/17.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124970"
+      photo: "https://randomuser.me/api/portraits/men/19.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124971"
+
+      photo: "https://randomuser.me/api/portraits/men/20.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124972"
+      photo: "https://randomuser.me/api/portraits/men/21.jpg"
     },
     {
-      name: "Torrecilas Beltrán Jesús Gustavo",
-      img: "https://randomuser.me/api/portraits/men/1.jpg",
-      matricula: "0319124972"
+      photo: "https://randomuser.me/api/portraits/men/22.jpg"
     }
 
   ]
