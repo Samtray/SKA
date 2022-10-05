@@ -16,7 +16,11 @@ export class InformacionEscolarComponent implements OnInit {
 
   @Input() catalogos!: ICatalogos;
   @Input() set alumno(value: Alumno){
+<<<<<<< HEAD
     let escolar = value?.datosEscolares;
+=======
+    let escolar = value.datosEscolares;
+>>>>>>> parent of a3efd0b (Revert "Merge branch 'master' into charts2")
 
     this.bachilleratoNombre = escolar?.nombreBachillerato
     this.tipoBachillerato = escolar?.tipoBachillerato

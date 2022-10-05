@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { catalogosInterface } from '../../carrousel/carrousel.component';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Alumno } from 'src/app/models/alumno';
+import { ICatalogos } from 'src/app/models/catalogos';
 
 @Component({
   selector: 'app-informacion-personal',
@@ -9,20 +10,30 @@ import { catalogosInterface } from '../../carrousel/carrousel.component';
 })
 export class InformacionPersonalComponent implements OnInit {
 
-  @Input() catalogos!: catalogosInterface;
-  @Input() alumno!: any;
-
   fechaDeNacimiento: any;
   entidadFederativa: any;
   genero: any;
   estadoCivil: any;
 
+  @Input() catalogos!: ICatalogos;
+
+  @Input() set alumno(value: Alumno){
+    let personales = value?.datosPersonales;
+
+    let fechaNacimiento = personales?.fechaNacimiento
+
+    fechaNacimiento = fechaNacimiento?.split("-").reverse().join("-");
+
+    this.fechaDeNacimiento = fechaNacimiento;
+    this.entidadFederativa = personales?.lugarDeNacimiento?.entidadFederativa;
+    this.genero = personales?.genero;
+    this.estadoCivil = personales?.estadoCivil;
+  };
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
-
 
 }
 
