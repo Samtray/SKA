@@ -9,8 +9,14 @@ import javax.persistence.*;
 @Table(name="datos_escolares")
 public class DatosEscolares {
     @Id @GeneratedValue Long id;
+
+    String nombreBachillerato;
     @OneToOne TipoBachillerato tipoBachillerato;
     @OneToOne EntidadFederativa entidadFederativa;
+
+    public String getNombreBachillerato() { return nombreBachillerato; }
+
+    public void setNombreBachillerato(String nombreBachillerato) { this.nombreBachillerato = nombreBachillerato; }
 
     public TipoBachillerato getTipoBachillerato() {
         return tipoBachillerato;

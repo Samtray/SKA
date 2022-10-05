@@ -115,6 +115,7 @@ insert into base_catalog values('EntidadFederativa', 'SIN','Sinaloa',null);
 
 insert into dbo.catalogs_entidades_federativas values(1, 'AGC');
 insert into dbo.catalogs_entidades_federativas values(1, 'BC');
+insert into dbo.catalogs_entidades_federativas values(1, 'SIN');
 
 
 /* ESTUDIANTE */
@@ -136,8 +137,7 @@ insert into base_career_por_cuatrimestre(base_career_id, por_cuatrimestre) value
 insert into dbo.promedios(id, bachillerato, ingenieria_id, tsu_id) values(1,8.9,2,1);
 
 	/* Datos Escolares */ 
-insert into dbo.datos_escolares(id, tipo_bachillerato_id, entidad_federativa_id) values(1, 'TB_PBL','BC');
-
+insert into dbo.datos_escolares(id, nombre_bachillerato, tipo_bachillerato_id, entidad_federativa_id) values(1, 'PFLC', 'TB_PBL','BC');
 	/* Datos Economicos */
 insert into dbo.datos_economicos(
 		id, 
