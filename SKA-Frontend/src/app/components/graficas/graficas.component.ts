@@ -35,6 +35,7 @@ export class GraficasComponent implements OnInit {
   cargando:boolean=true;
 
 
+
   constructor( private ApiService:ApiService) { }
 
   ngOnInit(): void {
@@ -44,22 +45,31 @@ export class GraficasComponent implements OnInit {
   iniciarGraficas(){
   this.ApiService.getGrupo().subscribe(data =>{
       this.estadisticas = data;
-      this.chartIngresos(this.estadisticas.estadisticas.datosPersonales.ingresosFamiliares[0].cantidad);
-  });
+      console.log(this.estadisticas);
+      this.chartIngresos(this.estadisticas.estadisticas.datosPersonales.ingresosFamiliares);
+      this.chartTrabajo(this.estadisticas.estadisticas.datosLaborales.trabajan, this.estadisticas.estadisticas.datosLaborales.trabajoRelacionadoEstudios);
+      this.trabajoRazonChart(this.estadisticas.estadisticas.datosLaborales.razonTrabaja);
+      this.generoCivilChart(this.estadisticas.estadisticas.datosPersonales.genero,this.estadisticas.estadisticas.datosPersonales.estadoCivil);
+      this.habitarChart(this.estadisticas.estadisticas.datosPersonales.viveCon);
+      this.TipoPrepasChart(this.estadisticas.estadisticas.datosEscolares.tipoBachilleraro);
+      this.prepasChart(this.estadisticas.estadisticas.datosEscolares.bachilleratos);
+      this.promedioChart(this.estadisticas.estadisticas.promedios.bachillerato,this.estadisticas.estadisticas.promedios.tsu,this.estadisticas.estadisticas.promedios.ingenieria);
+      this.calificacionesChart(this.estadisticas.estadisticas.promedios.tsu,this.estadisticas.estadisticas.promedios.ingenieria);
+    });
   }
 
   iniciarGraficas2(){
-    this.chartTrabajo();
-    this.trabajoRazonChart();
-    this.generoCivilChart();
-    this.habitarChart();
-    this.TipoPrepasChart();
-    this.prepasChart();
-    this.promedioChart();
-    this.calificacionesChart();
+
   }
 
-  chartIngresos(number: 1){
+  chartIngresos(object: any[]){
+    let descripciones: any = [];
+    let valores: any = [];
+    object.forEach(obj => {
+      descripciones.push(obj.descripcion)
+      valores.push(obj.cantidad)
+    });
+
     this.ingresosChart = {
       title: {
         text: 'Datos Personales',
@@ -81,7 +91,7 @@ export class GraficasComponent implements OnInit {
       xAxis: [
         {
           type: 'category',
-          data: ['$5,000 A $10,000', '$10,000 A $15,000', 'Menos de $5,000', 'Más de $15,000'],
+          data: descripciones,
           axisTick: {
             alignWithLabel: true
           }
@@ -97,13 +107,13 @@ export class GraficasComponent implements OnInit {
           name: 'Cantidad',
           type: 'bar',
           barWidth: '60%',
-          data: [{value: number,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
+          data: [{value: valores[0],itemStyle: {color: '#5b8e7d'}},{value:valores[1],itemStyle: {color: '#bc4b51'}},{value:valores[2],itemStyle: {color: '#f4a259'}},{value:valores[3],itemStyle: {color: '#f4e285'}}]
         }
       ]
     }
   }
 
-  chartTrabajo(){
+  chartTrabajo(object: any[],object2: any[]){
     this.laborChart = {
       title: {
         text: 'Datos Laborales',
@@ -186,7 +196,7 @@ export class GraficasComponent implements OnInit {
     }
   }
 
-  trabajoRazonChart(){
+  trabajoRazonChart(object: any[]){
     this.razonTrabajaChart = {
       title: {
         text: 'Datos Laborales',
@@ -234,7 +244,7 @@ export class GraficasComponent implements OnInit {
   }
 
 
-  generoCivilChart() {
+  generoCivilChart(object: any[],object2: any[]) {
     this.generoViveChart = {
       title: {
         text: 'Datos Personales',
@@ -319,7 +329,7 @@ export class GraficasComponent implements OnInit {
     };
   }
 
-  habitarChart(){
+  habitarChart(object: any[]){
     this.viveconChart = {
       title: {
         text: 'Datos Personales',
@@ -364,7 +374,7 @@ export class GraficasComponent implements OnInit {
     }
   }
 
-  TipoPrepasChart(){
+  TipoPrepasChart(object: any[]){
     this.bachillerChart = {
       title: {
         text: 'Datos Escolares',
@@ -400,7 +410,7 @@ export class GraficasComponent implements OnInit {
     }
   }
 
-  prepasChart() {
+  prepasChart(object: any[]) {
     this.bachilleratosChart = {
       title: {
         text: 'Datos Escolares',
@@ -447,7 +457,7 @@ export class GraficasComponent implements OnInit {
     }
   }
 
-  promedioChart() {
+  promedioChart(object: any[],object2: any[],object3: any[]) {
     this.promediosChart = {
       title: {
         text: 'Datos Escolares',
@@ -485,7 +495,7 @@ export class GraficasComponent implements OnInit {
 
   }
 
-  calificacionesChart(){
+  calificacionesChart(object: any[],object2: any[]){
     this.gradeChart = {
       title: {
         text: 'Datos Escolares',
