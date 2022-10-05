@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { combineLatest, map } from 'rxjs';
-import {  } from './components/carrousel/carrousel.component';
+import { combineLatest, map, tap } from 'rxjs';
+import { } from './components/carrousel/carrousel.component';
 import { CatalogoGenerico } from './models/alumno';
 import { ICatalogos } from './models/catalogos';
+import { IGrupo, Grupo } from './models/grupo';
 import { ApiService } from './services/api.service';
 
 @Component({
@@ -10,47 +11,50 @@ import { ApiService } from './services/api.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'SKA-Frontend';
 
   esconderTarjetas: boolean = true;
   loading = false;
   catalogos!: ICatalogos;
+  grupo!: IGrupo;
 
-  constructor(private apiService: ApiService){}
+  constructor(private apiService: ApiService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     combineLatest({
       catalogos: this.apiService.getCatalogos(),
-      alumno: this.apiService.getAlumno('0319100123'),
+      grupo: this.apiService.getGrupo(),
     })
-    .pipe(
-      map(response => {
-        const catalogos = <Array<CatalogoGenerico>>response.catalogos;
-        const grupo = <Array<any>>[response.alumno];
-        const result: any[] = [];
+      .pipe(
+        map(response => {
+          const catalogos = <Array<CatalogoGenerico>>response.catalogos;
+          const grupo = <Array<IGrupo>>[response.grupo];
+          const result: any[] = [];
 
-        grupo.map((grupo: any) => {
-          result.push({
-            ...grupo,
-          })
-        });
+          grupo.map((grupo: any) => {
+            result.push({
+              ...grupo,
+            })
+          });
 
-        catalogos.map((catalogo: any) => {
-          result.push({
-            ...catalogo,
-          })
-        });
+          catalogos.map((catalogo: any) => {
+            result.push({
+              ...catalogo,
+            })
+          });
 
-        return result;
-      })
-    )
-    .subscribe((data) => {
-      this.catalogos = data[1]
-    });
+          return result;
+        })
+      )
+      .subscribe((data) => {
+        this.catalogos = data[1]
+        this.grupo = data[0]
+        console.log(data);
+      });
   }
 
-  hideCards(event: boolean){
+  hideCards(event: boolean) {
     this.esconderTarjetas = event;
   }
 
