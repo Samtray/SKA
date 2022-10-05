@@ -1,11 +1,4 @@
-create database SKA;
 use SKA;
-
-select * from dbo.catalogs c 
-	join dbo.catalogs_apoyos_economicos ae on c.id = ae.catalogo_id
-	join dbo.catalogs_entidades_federativas ef on ae.catalogo_id = ef.catalogo_id; 
-
-select * from catalogs;
 
 insert into catalogs(id) values(1);
 
@@ -282,9 +275,3 @@ insert into dbo.grupo(
 );
 
 insert into dbo.grupo_alumnos(grupo_id, alumnos_matricula) values('TI-IDGS-9A-202203', '0319100123');
-
-select matricula, nombre_completo, foto from alumno a join grupo_alumnos ga on a.matricula = ga.alumnos_matricula
-join grupo g on ga.grupo_id = g.id;
-
-select g from grupo g join grupo_alumnos ga on g.id = ga.grupo_id
-join alumno a on a.matricula = ga.alumnos_matricula;
