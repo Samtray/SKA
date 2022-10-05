@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { Alumno } from 'src/app/models/alumno';
-import { ICatalogos } from 'src/app/models/catalogos';
+import { catalogosInterface } from '../../carrousel/carrousel.component';
 
 @Component({
   selector: 'app-informacion-economica',
@@ -10,22 +9,14 @@ import { ICatalogos } from 'src/app/models/catalogos';
 })
 export class InformacionEconomicaComponent implements OnInit {
 
+  @Input() catalogos!: catalogosInterface;
+  @Input() alumno!: any;
+
   viveCon: any;
   vivienda: any;
   transporte: any;
   apoyoEconomico: any;
   ingresosFamiliares: any;
-
-  @Input() catalogos!: ICatalogos;
-  @Input() set alumno(value: Alumno){
-    let economica = value?.datosEconomicos
-
-    this.viveCon = economica?.viveCon
-    this.vivienda = economica?.vivienda
-    this.transporte = economica?.transporte
-    this.apoyoEconomico = economica?.apoyoEconomico
-    this.ingresosFamiliares = economica?.ingresosFamiliares
-  };
 
   constructor() { }
 
