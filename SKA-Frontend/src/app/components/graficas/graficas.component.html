@@ -1,6 +1,52 @@
-<div class="background">
+<div>
+    <div class="gallery js-flickity" data-flickity='{ "pageDots": false }'>
+        <div class="gallery-cell">
+            <div class="graphsWrapper">
+                <div class="tarjeta" id="ingresosWrapper" *ngIf="cargando">
+                    <div echarts [options]="ingresosChart" class="resize"></div>
+                </div>
 
-<div class="card">
-    <div echarts [options]="generoViveChart"></div>
-</div>
+                <div class="donutTarjeta" id="laborWrapper">
+                    <div echarts [options]="laborChart" class="resize"></div>
+                </div>
+
+                <div class="tarjeta" id="razonWrapper">
+                    <div echarts [options]="razonTrabajaChart" class="resize"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-cell">
+            <div class="generoVive">
+                <div class="donutTarjeta" id="generoWrapper">
+                    <div echarts [options]="generoViveChart" class="resize"></div>
+                </div>
+
+                <div class="tarjeta" id="viveWrapper">
+                    <div echarts [options]="viveconChart" class="resize"></div>
+                </div>
+
+                <div class="donutTarjeta" id="prepaWrapper">
+                    <div echarts [options]="bachillerChart" class="resize"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-cell">
+            <div class="graphsWrapper">
+                <div class="tarjeta" id="bachilleratosWrapper">
+                    <div echarts [options]="bachilleratosChart" class="resize"></div>
+                </div>
+
+                <div class="tarjeta" id="promediosWrapper">
+                    <div echarts [options]="promediosChart" class="resize"></div>
+                </div>
+
+                <div class="tarjeta" id="calificacionWrapper">
+                    <div echarts [options]="gradeChart" class="resize"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
