@@ -1,8 +1,7 @@
 <app-header></app-header>
 <app-wrapper>
     <app-spinner *ngIf="loading" [mainPage]="true"></app-spinner>
-    <app-tarjetas *ngIf="esconderTarjetas && !loading"></app-tarjetas>
+    <app-tarjetas *ngIf="esconderTarjetas && !loading" [grupo]="grupo"></app-tarjetas>
     <app-carrousel (esconderTarjetas)="hideCards($event)" *ngIf="!loading" [grupo]="grupo" [catalogos]="catalogos"></app-carrousel>
     <app-graficas></app-graficas>
 </app-wrapper>
-

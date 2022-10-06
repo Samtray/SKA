@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { GraficasComponent } from './components/graficas/graficas.component';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
@@ -28,7 +27,6 @@ import * as echarts from 'echarts';
   declarations: [
     AppComponent,
     HeaderComponent,
-    AlumnosComponent,
     GraficasComponent,
     TarjetasComponent,
     WrapperComponent,
@@ -59,7 +57,6 @@ import * as echarts from 'echarts';
   bootstrap: [AppComponent],
   exports: [
     HeaderComponent,
-    AlumnosComponent,
     GraficasComponent,
     TarjetasComponent,
     WrapperComponent
