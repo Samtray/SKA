@@ -1,7 +1,7 @@
 .allcharts{
     margin-top: 20px;
 }
-.cord{
+.tarjeta{
     height: 400px;
     background: white;
     overflow: hidden;
@@ -10,7 +10,7 @@
     padding: 10px;
 }
 
-.donutcord{
+.donutTarjeta{
     height: 400px;
     background: white;
     overflow: hidden;
@@ -21,7 +21,7 @@
 
 
 
-.duangalesingle{
+.graphsWrapper{
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -37,37 +37,37 @@
 
 
 
-#quandaleincome{
+#ingresosWrapper{
     width:40%;
 }
-#quandalelabor{
-    width:20%;
+#laborWrapper{
+    width:25%;
 }
-#quandalereason{
+#razonWrapper{
     margin: auto;
     width: 40%;
     /* margin-top: 20px; */
 }
 
 
-#quandalegender{
+#generoWrapper{
     width: 30%;
 }
-#quandaleliveswith{
+#viveWrapper{
     width: 60%;
 }
-#quandalehighschool{
+#prepaWrapper{
     width:30%;
 }
 
 
-#quandalewhichschool{
+#bachilleratosWrapper{
     width: 40%;
 }
-#quandalegradeson{
+#calificacionWrapper{
     width: 40%;
 }
-#quandaleaverage{
+#promediosWrapper{
     width: 20%;
 }
 
@@ -145,7 +145,7 @@
 
 @media only screen and (max-width: 750px) {
 
-    .duangalesingle{
+    .graphsWrapper{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -175,44 +175,44 @@
         width: 100%;
     }
 
-    #quandaleincome{
+    #ingresosWrapper{
         margin: auto;
         width:100%;
     }
-    #quandalelabor{
+    #laborWrapper{
         margin: auto;
         width:100%;
     }
-    #quandalereason{
+    #razonWrapper{
         margin: auto;
         width:100%;
         /* margin-top: 20px; */
     }
     
     
-    #quandalegender{
+    #generoWrapper{
         margin: auto;
         width:100%;
     }
-    #quandaleliveswith{
+    #viveWrapper{
         margin: auto;
         width:100%;
     }
-    #quandalehighschool{
+    #prepaWrapper{
         margin: auto;
         width:100%;
     }
     
     
-    #quandalewhichschool{
+    #bachilleratosWrapper{
         margin: auto;
         width:100%;
     }
-    #quandalegradeson{
+    #promediosWrapper{
         margin: auto;
         width:100%;
     }
-    #quandaleaverage{
+    #calificacionWrapper{
         margin: auto;
         width:100%;
     }

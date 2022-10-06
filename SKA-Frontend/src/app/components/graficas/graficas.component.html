@@ -1,127 +1,16 @@
-<!--<div class="allcharts">
-
-    <div class="quandalepringle">
-        <div class="duangalesingle">
-            <div class="cord" id="quandaleincome">
-                <div echarts [options]="ingresosChart"></div>
-            </div>
-
-            <div class="donutcord" id="quandalelabor">
-                <div echarts [options]="laborChart"></div>
-            </div>
-
-            <div class="cord" id="quandalereason">
-                <div echarts [options]="razonTrabajaChart"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="generoVive">
-        <div class="donutcord" id="quandalegender">
-            <div echarts [options]="generoViveChart" class="test"></div>
-        </div>
-
-        <div class="cord" id="quandaleliveswith">
-            <div echarts [options]="viveconChart"></div>
-        </div>
-
-        <div class="donutcord" id="quandalehighschool">
-            <div echarts [options]="bachillerChart"></div>
-        </div>
-    </div>
-
-
-    <div class="duangalesingle">
-        <div class="cord" id="quandalewhichschool">
-            <div echarts [options]="bachilleratosChart"></div>
-        </div>
-
-        <div class="cord" id="quandaleaverage">
-            <div echarts [options]="promediosChart"></div>
-        </div>
-
-        <div class="cord" id="quandalegradeson">
-            <div echarts [options]="gradeChart"></div>
-        </div>
-    </div>
-
-</div>-->
-
-
-
-<!--<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="quandalepringle">
-            <div class="duangalesingle">
-                <div class="cord" id="quandaleincome">
-                    <div echarts [options]="ingresosChart"></div>
-                </div>
-
-                <div class="donutcord" id="quandalelabor">
-                    <div echarts [options]="laborChart"></div>
-                </div>
-
-                <div class="cord" id="quandalereason">
-                    <div echarts [options]="razonTrabajaChart"></div>
-                </div>
-
-            </div>
-        </div>
-      </div>
-      <div class="carousel-item active">
-        <div class="generoVive">
-            <div class="donutcord" id="quandalegender">
-                <div echarts [options]="generoViveChart" class="test"></div>
-            </div>
-
-            <div class="cord" id="quandaleliveswith">
-                <div echarts [options]="viveconChart"></div>
-            </div>
-
-            <div class="donutcord" id="quandalehighschool">
-                <div echarts [options]="bachillerChart"></div>
-            </div>
-        </div>
-      </div>
-      <div class="carousel-item active">
-        <div class="duangalesingle">
-            <div class="cord" id="quandalewhichschool">
-                <div echarts [options]="bachilleratosChart"></div>
-            </div>
-
-            <div class="cord" id="quandaleaverage">
-                <div echarts [options]="promediosChart"></div>
-            </div>
-
-            <div class="cord" id="quandalegradeson">
-                <div echarts [options]="gradeChart"></div>
-            </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>-->
-<div class="carrosusel">
+<div>
     <div class="gallery js-flickity" data-flickity='{ "pageDots": false }'>
         <div class="gallery-cell">
-            <div class="duangalesingle">
-                <div class="cord" id="quandaleincome" *ngIf="cargando">
+            <div class="graphsWrapper">
+                <div class="tarjeta" id="ingresosWrapper" *ngIf="cargando">
                     <div echarts [options]="ingresosChart" class="resize"></div>
                 </div>
 
-                <div class="donutcord" id="quandalelabor">
+                <div class="donutTarjeta" id="laborWrapper">
                     <div echarts [options]="laborChart" class="resize"></div>
                 </div>
 
-                <div class="cord" id="quandalereason">
+                <div class="tarjeta" id="razonWrapper">
                     <div echarts [options]="razonTrabajaChart" class="resize"></div>
                 </div>
             </div>
@@ -129,31 +18,31 @@
 
         <div class="gallery-cell">
             <div class="generoVive">
-                <div class="donutcord" id="quandalegender">
+                <div class="donutTarjeta" id="generoWrapper">
                     <div echarts [options]="generoViveChart" class="resize"></div>
                 </div>
 
-                <div class="cord" id="quandaleliveswith">
+                <div class="tarjeta" id="viveWrapper">
                     <div echarts [options]="viveconChart" class="resize"></div>
                 </div>
 
-                <div class="donutcord" id="quandalehighschool">
+                <div class="donutTarjeta" id="prepaWrapper">
                     <div echarts [options]="bachillerChart" class="resize"></div>
                 </div>
             </div>
         </div>
 
         <div class="gallery-cell">
-            <div class="duangalesingle">
-                <div class="cord" id="quandalewhichschool">
+            <div class="graphsWrapper">
+                <div class="tarjeta" id="bachilleratosWrapper">
                     <div echarts [options]="bachilleratosChart" class="resize"></div>
                 </div>
 
-                <div class="cord" id="quandaleaverage">
+                <div class="tarjeta" id="promediosWrapper">
                     <div echarts [options]="promediosChart" class="resize"></div>
                 </div>
 
-                <div class="cord" id="quandalegradeson">
+                <div class="tarjeta" id="calificacionWrapper">
                     <div echarts [options]="gradeChart" class="resize"></div>
                 </div>
             </div>
