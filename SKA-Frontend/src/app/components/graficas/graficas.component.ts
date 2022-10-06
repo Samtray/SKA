@@ -44,7 +44,7 @@ export class GraficasComponent implements OnInit {
   }
 
   iniciarGraficas(){
-
+    
   this.ApiService.getGrupo().subscribe(data =>{
       this.estadisticas = data;
       console.log(this.estadisticas);
@@ -59,7 +59,7 @@ export class GraficasComponent implements OnInit {
       this.calificacionesChart(this.estadisticas.estadisticas.promedios.tsu,this.estadisticas.estadisticas.promedios.ingenieria);
     });
   }
-
+  
   chartIngresos(object: any[]){
     let descripciones: any = [];
     let valores: any = [];
@@ -78,8 +78,7 @@ export class GraficasComponent implements OnInit {
         trigger: 'axis',
         axisPointer: {
           type: 'shadow'
-        },
-        confine: true
+        }
       },
       grid: {
         left: '3%',
@@ -115,7 +114,7 @@ export class GraficasComponent implements OnInit {
   chartTrabajo(object:any,object2:any){
     let siTrabaja = object.si;
     let noTrabaja = object.no;
-
+    
     let noRelacionado = object2.no;
     let relacionado = object2.si;
 
@@ -127,8 +126,7 @@ export class GraficasComponent implements OnInit {
       },
       tooltip: {
         trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)',
-        confine: true
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
       },
       /*legend: {
         data: [
@@ -220,8 +218,7 @@ export class GraficasComponent implements OnInit {
         trigger: 'axis',
         axisPointer: {
           type: 'shadow'
-        },
-        confine: true
+        }
       },
       grid: {
         left: '10%',
@@ -281,8 +278,7 @@ console.log(descripciones);
       },
       tooltip: {
         trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)',
-        confine: true
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
       },
       /*legend: {
         data: [
@@ -376,8 +372,7 @@ console.log(descripciones);
         trigger: 'axis',
         axisPointer: {
           type: 'shadow'
-        },
-        confine: true
+        }
       },
       grid: {
         left: '3%',
@@ -425,8 +420,7 @@ console.log(descripciones);
         left: 'center'
       },
       tooltip: {
-        trigger: 'item',
-        confine: true
+        trigger: 'item'
       },
       /*legend: {
         orient: 'vertical',
@@ -471,8 +465,7 @@ console.log(descripciones);
         trigger: 'axis',
         axisPointer: {
           type: 'shadow'
-        },
-        confine: true
+        }
       },
       grid: {
         left: '3%',
@@ -521,8 +514,7 @@ console.log(descripciones);
         left: 'center'
       },
       tooltip: {
-        trigger: 'item',
-        confine: true
+        trigger: 'item'
       },
       /*legend: {
         orient: 'vertical',
@@ -566,8 +558,7 @@ console.log(descripciones);
         trigger: 'axis',
         axisPointer: {
           type: 'shadow'
-        },
-        confine: true
+        }
       },
       grid: {
         left: '3%',
