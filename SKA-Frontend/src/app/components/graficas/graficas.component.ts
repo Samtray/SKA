@@ -4,7 +4,7 @@ import {CarouselModule} from 'primeng/carousel';
 import { IGrupo } from 'src/app/models/grupo';
 import { ApiService } from 'src/app/services/api.service';
 type EChartsOption = echarts.EChartsOption
-var colorPalette = ['#5B8E7D', '#BC4B51','#F4E285'];
+var colorPalette = ['#5B8E7D', '#F4E285','#BC4B51'];
 @Component({
   selector: 'app-graficas',
   templateUrl: './graficas.component.html',
@@ -40,9 +40,11 @@ export class GraficasComponent implements OnInit {
 
   ngOnInit(): void {
     this.iniciarGraficas();
+
   }
 
   iniciarGraficas(){
+    
   this.ApiService.getGrupo().subscribe(data =>{
       this.estadisticas = data;
       console.log(this.estadisticas);
@@ -57,11 +59,7 @@ export class GraficasComponent implements OnInit {
       this.calificacionesChart(this.estadisticas.estadisticas.promedios.tsu,this.estadisticas.estadisticas.promedios.ingenieria);
     });
   }
-
-  iniciarGraficas2(){
-
-  }
-
+  
   chartIngresos(object: any[]){
     let descripciones: any = [];
     let valores: any = [];
@@ -113,7 +111,13 @@ export class GraficasComponent implements OnInit {
     }
   }
 
-  chartTrabajo(object: any[],object2: any[]){
+  chartTrabajo(object:any,object2:any){
+    let siTrabaja = object.si;
+    let noTrabaja = object.no;
+    
+    let noRelacionado = object2.no;
+    let relacionado = object2.si;
+
     this.laborChart = {
       title: {
         text: 'Datos Laborales',
@@ -147,8 +151,8 @@ export class GraficasComponent implements OnInit {
             show: false
           },
           data: [
-            { value: 9, name: 'Si', selected: true  },
-            { value: 20, name: 'No',}
+            { value: siTrabaja, name: 'Si', selected: true  },
+            { value: noTrabaja, name: 'No',}
           ],
           color:colorPalette
         },
@@ -187,8 +191,8 @@ export class GraficasComponent implements OnInit {
             }
           },
           data: [
-            { value: 5, name: 'Si' },
-            { value: 4, name: 'No' },
+            { value: relacionado, name: 'Si' },
+            { value: noRelacionado, name: 'No' },
 
           ]
         }
@@ -197,6 +201,13 @@ export class GraficasComponent implements OnInit {
   }
 
   trabajoRazonChart(object: any[]){
+    let descripciones: any = [];
+    let valores: any = [];
+    object.forEach(obj => {
+      descripciones.push(obj.descripcion)
+      valores.push(obj.cantidad)
+    });
+
     this.razonTrabajaChart = {
       title: {
         text: 'Datos Laborales',
@@ -218,7 +229,7 @@ export class GraficasComponent implements OnInit {
       xAxis: [
         {
           type: 'category',
-          data: ['Apoyar Económicamente a la Familia', 'Solventar Algunos Gastos Personales', 'Apoyar Totalmente a la Familia', 'Sostenerme Totalmente'],
+          data: descripciones,
           axisTick: {
             alignWithLabel: true
           },
@@ -237,7 +248,7 @@ export class GraficasComponent implements OnInit {
           name: 'Cantidad',
           type: 'bar',
           barWidth: '60%',
-          data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
+          data: [{value:valores[0],itemStyle: {color: '#5b8e7d'}},{value:valores[1],itemStyle: {color: '#bc4b51'}},{value:valores[2],itemStyle: {color: '#f4a259'}},{value:valores[3],itemStyle: {color: '#f4e285'}}]
         }
       ]
     }
@@ -245,6 +256,20 @@ export class GraficasComponent implements OnInit {
 
 
   generoCivilChart(object: any[],object2: any[]) {
+    let descripciones: any = [];
+    let valores: any = [];
+    object.forEach(obj => {
+      descripciones.push(obj.descripcion)
+      valores.push(obj.cantidad)
+    });
+console.log(descripciones);
+    let descripciones2: any = [];
+    let valores2: any = [];
+    object2.forEach(obj => {
+      descripciones2.push(obj.descripcion)
+      valores2.push(obj.cantidad)
+    });
+
     this.generoViveChart = {
       title: {
         text: 'Datos Personales',
@@ -279,8 +304,8 @@ export class GraficasComponent implements OnInit {
             show: false
           },
           data: [
-            { value: 22, name: 'Masculino' },
-            { value: 7, name: 'Femenino', selected: true }
+            { value: valores[0], name: descripciones[0] },
+            { value: valores[1], name: descripciones[1], selected: true }
           ],
           color:colorPalette
         },
@@ -319,8 +344,8 @@ export class GraficasComponent implements OnInit {
             }
           },
           data: [
-            { value: 28, name: 'Soltero(a)' },
-            { value: 1, name: 'Unión Libre' },
+            { value: valores2[0], name: descripciones2[0] },
+            { value: valores2[1], name: descripciones2[1] },
 
           ],
           color:colorPalette
@@ -330,6 +355,13 @@ export class GraficasComponent implements OnInit {
   }
 
   habitarChart(object: any[]){
+    let descripciones: any = [];
+    let valores: any = [];
+    object.forEach(obj => {
+      descripciones.push(obj.descripcion)
+      valores.push(obj.cantidad)
+    });
+
     this.viveconChart = {
       title: {
         text: 'Datos Personales',
@@ -351,7 +383,7 @@ export class GraficasComponent implements OnInit {
       xAxis: [
         {
           type: 'category',
-          data: ['Ambos Padres', 'Uno Solo', 'Solo(a)', 'Otro Familiar'],
+          data: descripciones,
           axisTick: {
             alignWithLabel: true
           }
@@ -367,7 +399,7 @@ export class GraficasComponent implements OnInit {
           name: 'Cantidad',
           type: 'bar',
           barWidth: '60%',
-          data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}],
+          data: [{value:valores[0],itemStyle: {color: '#5b8e7d'}},{value:valores[1],itemStyle: {color: '#bc4b51'}},{value:valores[2],itemStyle: {color: '#f4a259'}},{value:valores[3],itemStyle: {color: '#f4e285'}}],
 
         }
       ]
@@ -375,6 +407,12 @@ export class GraficasComponent implements OnInit {
   }
 
   TipoPrepasChart(object: any[]){
+    let descripciones: any = [];
+    let valores: any = [];
+    object.forEach(obj => {
+      descripciones.push(obj.descripcion)
+      valores.push(obj.cantidad)
+    });
     this.bachillerChart = {
       title: {
         text: 'Datos Escolares',
@@ -394,8 +432,8 @@ export class GraficasComponent implements OnInit {
           type: 'pie',
           radius: '50%',
           data: [
-            { value: 27, name: 'Escuela publica' },
-            { value: 2, name: 'Escuela Privada' }
+            { value: valores[0], name: descripciones[0] },
+            { value: valores[1], name: descripciones[1] }
           ],
           color:colorPalette,
           emphasis: {
@@ -411,6 +449,12 @@ export class GraficasComponent implements OnInit {
   }
 
   prepasChart(object: any[]) {
+    let descripciones: any = [];
+    let valores: any = [];
+    object.forEach(obj => {
+      descripciones.push(obj.descripcion)
+      valores.push(obj.cantidad)
+    });
     this.bachilleratosChart = {
       title: {
         text: 'Datos Escolares',
@@ -432,7 +476,7 @@ export class GraficasComponent implements OnInit {
       xAxis: [
         {
           type: 'category',
-          data: ['Cecyte Rio', 'CBTIs 116', 'Conalep II', 'Cecyte Florido','CBTIs 58','Cecyte Villa del Sol','CBTIs 237'],
+          data: descripciones,
           axisTick: {
             alignWithLabel: true
           },
@@ -451,13 +495,18 @@ export class GraficasComponent implements OnInit {
           name: 'Cantidad',
           type: 'bar',
           barWidth: '60%',
-          data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
+          data: [{value:valores[0],itemStyle: {color: '#5b8e7d'}},{value:valores[1],itemStyle: {color: '#bc4b51'}},{value:valores[2],itemStyle: {color: '#f4a259'}},{value:valores[3],itemStyle: {color: '#f4e285'}},{value:valores[4],itemStyle: {color: '#588157'}},{value:valores[5],itemStyle: {color: '#bc4749'}},
+          {value:valores[6],itemStyle: {color: '#f4a259'}},{value:valores[7],itemStyle: {color: '#05668d'}},{value:valores[8],itemStyle: {color: '#5b8e7d'}},{value:valores[9],itemStyle: {color: '#f4e285'}},{value:valores[10],itemStyle: {color: '#9fffcb'}},]
         }
       ]
     }
   }
 
-  promedioChart(object: any[],object2: any[],object3: any[]) {
+  promedioChart(object:any, object2:any, object3:any) {
+    let promedBachiller = object;
+    let promedTSU = object2.promedio;
+    let promedING = object3.promedio;
+
     this.promediosChart = {
       title: {
         text: 'Datos Escolares',
@@ -477,9 +526,9 @@ export class GraficasComponent implements OnInit {
           type: 'pie',
           radius: '50%',
           data: [
-            { value: 8.4, name: 'Bachillerato' },
-            { value: 9.0, name: 'TSU' },
-            { value: 9.1, name: 'Ingeniería' }
+            { value: promedBachiller, name: 'Bachillerato' },
+            { value: promedING, name: 'TSU' },
+            { value: promedING, name: 'Ingeniería' }
           ],
           color:colorPalette,
           emphasis: {
@@ -495,7 +544,10 @@ export class GraficasComponent implements OnInit {
 
   }
 
-  calificacionesChart(object: any[],object2: any[]){
+  calificacionesChart(object:any,object2:any){
+    let tsuPromedios: any = object.porCuatrimestre;
+    let ingPromedios: any = object2.porCuatrimestre;
+
     this.gradeChart = {
       title: {
         text: 'Datos Escolares',
@@ -536,7 +588,8 @@ export class GraficasComponent implements OnInit {
           name: 'Cantidad',
           type: 'bar',
           barWidth: '60%',
-          data: [{value:18,itemStyle: {color: '#5b8e7d'}},{value:7,itemStyle: {color: '#bc4b51'}},{value:2,itemStyle: {color: '#f4a259'}},{value:2,itemStyle: {color: '#f4e285'}}]
+          data: [{value:tsuPromedios[0],itemStyle: {color: '#5b8e7d'}},{value:tsuPromedios[1],itemStyle: {color: '#bc4b51'}},{value:tsuPromedios[2],itemStyle: {color: '#f4a259'}},{value:tsuPromedios[3],itemStyle: {color: '#588157'}},
+          {value:tsuPromedios[4],itemStyle: {color: '#bc4749'}},{value:tsuPromedios[5],itemStyle: {color: '#f4a259'}},{value:ingPromedios[0],itemStyle: {color: '#05668d'}},{value:ingPromedios[1],itemStyle: {color: '#f4e285'}}]
         }
       ]
     }
