@@ -69,7 +69,6 @@ export class CarrouselComponent implements OnInit {
 }
 
 
-
 const responsiveOptions = [
   {
     breakpoint: '1024px',
