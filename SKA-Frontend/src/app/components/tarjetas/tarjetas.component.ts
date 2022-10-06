@@ -20,7 +20,6 @@ export class TarjetasComponent implements OnInit, AfterContentInit {
   constructor() { }
 
   ngAfterContentInit(): void {
-    console.log(this.grupoAlumnos)
     this.tarjetaList = [
       { icon: 'person', title: this.grupoContador.alumnos, subTitle: 'Alumnos' },
       { icon: 'group', title: this.grupoAlumnos.cuatrimestre + '°' + this.grupoAlumnos.grupo, subTitle: 'Grupo' },

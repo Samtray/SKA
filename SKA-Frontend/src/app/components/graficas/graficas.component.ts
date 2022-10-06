@@ -47,7 +47,6 @@ export class GraficasComponent implements OnInit {
 
   this.ApiService.getGrupo().subscribe(data =>{
       this.estadisticas = data;
-      console.log(this.estadisticas);
       this.chartIngresos(this.estadisticas.estadisticas.datosPersonales.ingresosFamiliares);
       this.chartTrabajo(this.estadisticas.estadisticas.datosLaborales.trabajan, this.estadisticas.estadisticas.datosLaborales.trabajoRelacionadoEstudios);
       this.trabajoRazonChart(this.estadisticas.estadisticas.datosLaborales.razonTrabaja);
@@ -265,7 +264,6 @@ export class GraficasComponent implements OnInit {
       descripciones.push(obj.descripcion)
       valores.push(obj.cantidad)
     });
-console.log(descripciones);
     let descripciones2: any = [];
     let valores2: any = [];
     object2.forEach(obj => {
