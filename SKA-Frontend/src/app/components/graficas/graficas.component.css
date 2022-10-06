@@ -1,7 +1,8 @@
-.allcharts{
+.allcharts {
     margin-top: 20px;
 }
-.tarjeta{
+
+.tarjeta {
     height: 400px;
     background: white;
     overflow: hidden;
@@ -10,7 +11,7 @@
     padding: 10px;
 }
 
-.donutTarjeta{
+.donutTarjeta {
     height: 400px;
     background: white;
     overflow: hidden;
@@ -19,55 +20,55 @@
     padding: 10px;
 }
 
-
-
-.graphsWrapper{
+.graphsWrapper {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
 }
 
-.generoVive{
+.generoVive {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
 }
 
-
-
-#ingresosWrapper{
-    width:40%;
+#ingresosWrapper {
+    width: 40%;
 }
-#laborWrapper{
-    width:25%;
+
+#laborWrapper {
+    width: 25%;
 }
-#razonWrapper{
+
+#razonWrapper {
     margin: auto;
     width: 40%;
     /* margin-top: 20px; */
 }
 
-
-#generoWrapper{
+#generoWrapper {
     width: 30%;
 }
-#viveWrapper{
+
+#viveWrapper {
     width: 60%;
 }
-#prepaWrapper{
-    width:30%;
+
+#prepaWrapper {
+    width: 30%;
 }
 
+#bachilleratosWrapper {
+    width: 40%;
+}
 
-#bachilleratosWrapper{
+#calificacionWrapper {
     width: 40%;
 }
-#calificacionWrapper{
-    width: 40%;
-}
-#promediosWrapper{
+
+#promediosWrapper {
     width: 20%;
 }
 
@@ -76,166 +77,137 @@
     height: 500px;
     margin-right: 10px;
 }
-  
-.gallery{
-    margin-top:10px;
-    margin-left:auto;
-    margin-right:auto;
+
+.gallery {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (min-width: 1366px) {
-    #quandalelabor{
-        width:30%;
+    #quandalelabor {
+        width: 30%;
     }
-    .resize{
+    .resize {
         height: 400px;
     }
-
     .gallery-cell {
         height: 400px;
-
     }
-
 }
 
 @media only screen and (max-width: 1365px) {
-    #quandalelabor{
-        width:40%;
+    #quandalelabor {
+        width: 40%;
     }
-    .resize{
+    .resize {
         height: 300px;
     }
-
     .gallery-cell {
         height: 300px;
-
     }
-    .cord{
+    .cord {
         height: 400px;
     }
-    .donutcord{
+    .donutcord {
         height: 400px;
     }
-
 }
 
-
-
-
-
 @media only screen and (max-width: 975px) {
-
-    .cord{
+    .cord {
         height: 200px;
     }
-    .donutcord{
+    .donutcord {
         height: 200px;
     }
-
-    .resize{
+    .resize {
         height: 200px;
     }
-
     .gallery-cell {
         height: 200px;
-
     }
-
 }
 
 @media only screen and (max-width: 750px) {
-
-    .graphsWrapper{
+    .graphsWrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
-    .generoVive{
+    .generoVive {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     .gallery-cell {
         height: 1300px;
     }
-
-    .cord{
+    .cord {
         height: 400px;
         width: 100%;
     }
-    .donutcord{
+    .donutcord {
         height: 400px;
         width: 100%;
     }
-
-    .resize{
+    .resize {
         height: 400px;
         width: 100%;
     }
-
-    #ingresosWrapper{
+    #ingresosWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-    #laborWrapper{
+    #laborWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-    #razonWrapper{
+    #razonWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
         /* margin-top: 20px; */
     }
-    
-    
-    #generoWrapper{
+    #generoWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-    #viveWrapper{
+    #viveWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-    #prepaWrapper{
+    #prepaWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-    
-    
-    #bachilleratosWrapper{
+    #bachilleratosWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-    #promediosWrapper{
+    #promediosWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-    #calificacionWrapper{
+    #calificacionWrapper {
         margin: auto;
-        width:100%;
+        width: 100%;
     }
-
 }
 
 @media only screen and (max-width: 450px) {
     .gallery-cell {
-        height: 1000px;
+        height: 1200px;
     }
-
-    .cord{
+    .cord {
         height: 300px;
         width: 100%;
     }
-    .donutcord{
+    .donutcord {
         height: 300px;
         width: 100%;
     }
-
-    .resize{
+    .resize {
         height: 300px;
         width: 100%;
     }
-
 }
