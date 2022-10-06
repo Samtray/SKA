@@ -34,9 +34,8 @@ export class CarrouselComponent implements OnInit {
 
   }
 
-
-
   abrirMenu(alumno: string) {
+    this.loading = true;
     combineLatest({
       alumno: this.apiService.getAlumno(alumno),
     }).pipe(map(response => {
@@ -52,7 +51,7 @@ export class CarrouselComponent implements OnInit {
       return result;
     })).subscribe((data) => {
       this.selectedAlumno = data[0]
-      console.log(this.selectedAlumno)
+      this.loading = false;
     });
 
 
