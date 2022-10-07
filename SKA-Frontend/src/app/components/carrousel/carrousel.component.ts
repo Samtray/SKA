@@ -23,8 +23,6 @@ export class CarrouselComponent implements OnInit {
   displayMenu: boolean = false;
   selectedIndex: any = 0;
 
-
-
   loading = false;
 
   constructor(private apiService: ApiService) { }

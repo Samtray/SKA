@@ -129,15 +129,6 @@ export class GraficasComponent implements OnInit {
         formatter: '{a} <br/>{b}: {c} ({d}%)',
         confine: true
       },
-      /*legend: {
-        data: [
-          'Masculino',
-          'Femenino',
-          'Soltero(a)',
-          'Unión Libre',
-        ],
-
-      },*/
       series: [
         {
           name: 'Trabajan',
@@ -282,16 +273,6 @@ export class GraficasComponent implements OnInit {
         formatter: '{a} <br/>{b}: {c} ({d}%)',
         confine: true
       },
-      /*legend: {
-        data: [
-          'Masculino',
-          'Femenino',
-          'Soltero(a)',
-          'Unión Libre',
-        ],
-        orient: 'vertical',
-        left: 'left',
-      },*/
       series: [
         {
           name: 'Genero',
@@ -426,10 +407,6 @@ export class GraficasComponent implements OnInit {
         trigger: 'item',
         confine: true
       },
-      /*legend: {
-        orient: 'vertical',
-        left: 'left'
-      },*/
       series: [
         {
           name: 'Access From',
@@ -522,10 +499,6 @@ export class GraficasComponent implements OnInit {
         trigger: 'item',
         confine: true
       },
-      /*legend: {
-        orient: 'vertical',
-        left: 'left'
-      },*/
       series: [
         {
           name: 'Access From',
