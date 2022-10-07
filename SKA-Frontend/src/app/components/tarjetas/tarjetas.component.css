@@ -7,7 +7,7 @@
 
 .tarjeta {
     background: #FFFFFF;
-    border: 1px solid #c7af7c;
+    border: 1px solid var(--surface-d);
     border-radius: 10px;
     width: calc(20% - 8px);
     height: 100px;

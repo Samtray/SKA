@@ -44,13 +44,13 @@
 
 .matricula {
     margin: auto;
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: #c7af7c;
-    padding: 5px 10px 5px 10px;
+    padding: 2px 10px;
     width: fit-content;
     border-radius: 50px;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .nombre {
