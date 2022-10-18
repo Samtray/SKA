@@ -1,3 +1,2 @@
 # SKA
-EEEEEEEEEEEEEEE EEEEEEEEEEEEEE EEEEEEEEE EEEEEEEEEEEEEE EEEEEeeeeeeeeeeeeeeee
--sans
+Mini-proyecto para gestion de alumnos de UTT.
